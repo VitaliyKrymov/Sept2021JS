@@ -7,30 +7,31 @@
 <body>
 <script>
 
-    //    HOMEWORK
+    //                                              HOMEWORK
+
     //    - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
     //    (в першу, другу, третю или четверту частину години).
-    let time = +prompt('How minuts?');
-    switch (true) {
-        case  time >= 0 && time <= 15:
-            console.log('1-a chast');
-            break;
-        case  time <= 15 && time > 0:
-            console.log('1-a chast');
-            break;
-        case  time > 15 && time <= 30:
-            console.log('2-a chast');
-            break;
-        case  time > 30 && time <= 45:
-            console.log('3-a chast');
-            break;
-        case  time > 45 && time <= 60:
-            console.log('4-a chast');
-            break;
-        case time > 60 || time < 0:
-            console.log('The watch broke down')
-            break;
-    }
+    // let time = +prompt('How minuts?');
+    // switch (true) {
+    //     case  time >= 0 && time <= 15:
+    //         console.log('1-a chast');
+    //         break;
+    //     case  time <= 15 && time > 0:
+    //         console.log('1-a chast');
+    //         break;
+    //     case  time > 15 && time <= 30:
+    //         console.log('2-a chast');
+    //         break;
+    //     case  time > 30 && time <= 45:
+    //         console.log('3-a chast');
+    //         break;
+    //     case  time > 45 && time <= 60:
+    //         console.log('4-a chast');
+    //         break;
+    //     case time > 60 || time < 0:
+    //         console.log('The watch broke down')
+    //         break;
+    // }
 
     //    - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
@@ -53,37 +54,280 @@
 
     //    - У нас є змінна test не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
 
-    // let test = confirm('Write your answer YES or NO');
+    // let test = confirm('Click your answer: Ok or Cansel');
     // if (test) {
     //     document.write("RIGHT")
     // } else
     // {
     //     document.write("WRONG")
     // }
-    //        Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
-
+    // Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
+    //  let answerTest = test === true ? 'Вірно': 'Невірно';
+    //  console.log(answerTest);
 
     //    - Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
-    let a = +prompt('Enter Your ANSWER 0 or 1 or -3')
-    document.write(a);
-    switch (true) {
-        case a !== 0 && a>0:
-            document.write("RIGHT");
-            break;
-        case a === 0:
-            document.write("WRONG");
-            break
-        case a < 0:
-            document.write("????");
-            break
-    }
+    // let a = +prompt('Enter Your ANSWER 0 or 1 or -3')
+    // switch (true) {
+    //     case a !== 0 && a>0:
+    //         document.write("RIGHT");
+    //         break;
+    //     case a === 0:
+    //         document.write("WRONG");
+    //         break
+    //     case a < 0:
+    //         document.write("????");
+    //         break
+    // }
+
+    // let answer = a !== 0 ? 'Вірно': 'Невірно';
+    //  console.log(answer);
 
     //    - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.
     //
+    // let a = +prompt('Enter day of week: 1 ... 7')
+    // if (a >= 1 && a <= 7) {
+    //     switch (a) {
+    //         case  1 :
+    //             document.write("Mondey. 8-00 go to work,19-45 lecture JS");
+    //             break;
+    //         case  2:
+    //             document.write("Tuesday. 8-00 go to work. 19-00 Do Homework JS");
+    //             break;
+    //         case  3:
+    //             document.write("Wednesday. 8-00 go to work, 19-45 lecture JS ");
+    //             break;
+    //         case  4:
+    //             document.write("Thursday. 8-00 go to work. 19 Do Homework JS");
+    //             break;
+    //         case  5:
+    //             document.write("Friday. 8-00 go to work, 19-45 lecture JS ");
+    //             break;
+    //         case  6:
+    //             document.write("Saturday. 10-00 Lern English, Do Homework JS");
+    //             break;
+    //         case  7:
+    //             document.write("Sunday. Sleep??? No! -> Do Homework JS");
+    //             break;
+    //     }
+    // } else {document.write("Write correct day!"); }
+
     //    - Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.
-    //
+
+    // let year = +prompt('Enter your year.');
+    // if (year % 4 === 0) {
+    //     document.write("Your year is leap-year");
+    // } else {
+    //     document.write("Your year is not a leap-year")
+    // }
+
     //    - Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
     //Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
+    //  let javaScriptOfficialName = prompt('Enter: Яка «офіційна» назва JavaScript?')
+    // if (javaScriptOfficialName === "ECMAScript"){document.write("Правильно!")}
+    // else { document.write('«Не знаєте? ECMAScript!')}
+
+
+    //                                             CLASSWORK
+
+
+    // - Користувач вводить або має два числа.
+    //     Потрібно знайти та вивести максимальне число з тих двох .
+    //     Також потрібно врахувати коли введені рівні числа.
+
+    // let yourFirstNumber = +prompt('Write your first number');
+    // let yourSecondNumber = +prompt('Write your second number');
+    // if (yourFirstNumber === yourSecondNumber) {
+    //     document.write('Your numbers are the same.')
+    // } else if (yourFirstNumber > yourSecondNumber) {
+    //     document.write(yourFirstNumber);
+    // } else if (yourFirstNumber < yourSecondNumber) {
+    //     document.write(yourSecondNumber);
+    // }
+    //
+    // - У першому під'їзді квартири з 1 до 20. У другому з 21 по 48. У третьому з 49 по 90.
+    // Користувач вводить номер квартири просто в змінні або через prompt('') .
+    //     Програма повинна зазначити, в якому під'їзді знаходиться дана квартира.
+    //
+    // let flatNumber = +prompt("Write your flat number");
+    // switch (true) {
+    //     case  (flatNumber >= 1 && flatNumber <= 20) :
+    //         document.write('Your flat is in the first part of the house.');
+    //         break;
+    //     case  (flatNumber >= 21 && flatNumber <= 48) :
+    //         document.write('Your flat is in the second part of the house.');
+    //         break;
+    //     case  (flatNumber >= 49 && flatNumber <= 90) :
+    //         document.write('Your flat is in the third part of the house.');
+    //         break;
+    // }
+
+    // - Ми маємо змінну number в яку користувач задає числове значення,  якщо змінна рівна 10 вивести повідомлення ВІРНО, якщо змінна не рівна 10 - тоді НЕВІРНО
+
+    // let number = +prompt('Your number');
+    // let answerNumber = number === 10 ? 'Вірно' : 'Невірно';
+    // document.write(answerNumber);
+
+    // - Ми маємо змінну x в яку користувач задає  значення,  якщо в змінну записане число, вивести 1,
+    //     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 3.
+    // якщо в змінну записали щось інше, спрацьовує else
+    //
+    // let x = true;
+    // let type = String(typeof x );
+    // console.log(type);
+    // switch (type) {
+    //     case "number" :
+    //         document.write('1');
+    //         break;
+    //     case 'string':
+    //         document.write('2');
+    //         break;
+    //     case 'boolean':
+    //         document.write('3');
+    //         break;
+    //     case "object":
+    //         document.write('4');
+    //         break;
+    //     case type :
+    //         document.write(type);
+    //         break;
+    // }
+
+    // - Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
+    //     Змінна, яка характеризує температуру. Якщо температура від +10 до +22 вивести повідомлення що ми йдемо ВЧИТИСЯ .
+    //     Якщо інша темпаретура, тоді виводимо повідомлення що сидимо вдома і вчимося ОНЛАЙН
+    //
+    // let temperature = 23;
+    // if (temperature >= 10 && temperature <= 22) {
+    //     document.write('Mи йдемо ВЧИТИСЯ .')
+    // } else {
+    //     document.write('Mи сидимо вдома і вчимося ОНЛАЙН')
+    // }
+    //
+    // - За допомогою switch case - реалізувати гру - вікторину, де ми вводимо число від 1 до 5. І взалежності від введеного
+    //     числа нам дається приз. (Авто, Мото, Телефон, і т.д ) і якщо число не підходить тоді  вивести Повідомлення - що число не вірне ... .
+    // let heppyNumber=+prompt("Введіть число від 1 до 5");
+    // switch (heppyNumber) {
+    //     case 1:
+    //         document.write('Ваш приз Авто');
+    //         break;
+    //     case 2:
+    //         document.write('Ваш приз Мото');
+    //         break;
+    //     case 3:
+    //         document.write('Ваш приз Телефон');
+    //         break;
+    //     case 4:
+    //         document.write('Ваш приз Торт');
+    //         break;
+    //     case 5:
+    //         document.write('Ваш приз Путівка');
+    //         break;
+    // }
+    // if (heppyNumber<1 || heppyNumber>5){
+    //     document.write('число не вірне!')
+    // }
+
+                                                    // ADDITIONAL
+
+
+    // -Нам дано масив друзів
+    // let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
+    // Потрібно зробити перевірку якщо
+    // кількість елементів у масиві більше або дорівнює 3, то виводиться повідомлення про те, що це великий масив,
+    // в якому 3 і
+    // більше елементи.
+    // Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3 - х елементів.
+
+    // let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
+    // let counter = 0;
+    // if (friends[0] !== undefined) {
+    //     counter++
+    // };
+    // if (friends[1] !== undefined) {
+    //     counter++
+    // };
+    // if (friends[2] !== undefined) {
+    //     counter++
+    // };
+    // if (friends[3] !== undefined) {
+    //     counter++
+    // };
+    // if (friends[4] !== undefined) {
+    //     counter++
+    // };
+    // console.log(counter);
+
+    // if (counter >= 3) {
+    //     console.log('Array friends is big. It consist from 3 or more elements')
+    // } else {
+    //     console.log('Array friends is little.It consist less then 3 elements');
+    // }
+
+
+    // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
+    // Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
+
+    // let a = -92;
+    // let b = 1;
+    // let c = -5;
+    // let srednee;
+    // let min;
+    // let max;
+    // if (a > b && a > c) {
+    //     max = a
+    // } else if (a < b && a < c) {
+    //     min = a
+    // } else {
+    //     srednee = a
+    // }
+    //
+    // if (b > a && b > c) {
+    //     max = b
+    // } else if (b < a && b < c) {
+    //     min = b
+    // } else {
+    //     srednee = b
+    // }
+    //
+    // if (c > a && c > b) {
+    //     max = c
+    // } else if (c < b && c < a) {
+    //     min = c
+    // } else {
+    //     srednee = c
+    // }
+    //
+    // document.write("минимальное число = "+ min);
+    // document.write(`<br>`);
+    // document.write("среднее число = "+srednee);
+    // document.write(`<br>`);
+    // document.write("максимальное число = "+max);
+
+
+    // - Перепишіть конструкцію if з використанням умовного оператора '?':
+    // let result;
+    // if (a + b < 4) {
+    //     result = 'Мало';
+    // } else {
+    //     result = 'Багато';
+    // }
+
+    // let result;
+    // let a=1;
+    // let b=2;
+    // result= (a+b)<4? "Мало":'Багато';
+    // document.write(result);
+
+    // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
+    // напишіть це тернарним оператором
+    // let a = 100;
+    // let x;
+    // if (a === 0) {
+    //     x = 0
+    // } else {
+    //     x = a > 0 && a !== 0 ? "позитивним" : 'негативним';
+    // }
+    // document.write(x);
 
 </script>
 
