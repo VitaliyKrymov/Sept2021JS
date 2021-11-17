@@ -536,18 +536,18 @@
 
  for(let i=0; i<citiesWithId.length;i++){
 
-     console.log(citiesWithId[i].user_id)
+             // console.log(citiesWithId[i].user_id)
+             //
+             // console.log(usersWithId[(citiesWithId[i].user_id)-1])
+             //
+             // console.log(citiesWithId[i])
+// newArr[(citiesWithId[i].user_id)-1]=usersWithId[(citiesWithId[i].user_id)-1]+citiesWithId[i]// как добавить поле к существующему обьекту не знаю
+     newArr[(citiesWithId[i].user_id)-1]=usersWithId[(citiesWithId[i].user_id)-1];
+     newArr[(citiesWithId[i].user_id)-1].address=citiesWithId[i]
 
-     console.log(usersWithId[(citiesWithId[i].user_id)-1])
 
-     console.log(citiesWithId[i])
-
-
-     newArr[(citiesWithId[i].user_id)-1]=usersWithId[(citiesWithId[i].user_id)-1]+citiesWithId[i]// как добавить поле к существующему обьекту не знаю
-     // Object.assign
  }
-
-console.log(newArr[1])
+console.log(newArr[1])      //похоже что получилось!!!
 //
 //
 //
