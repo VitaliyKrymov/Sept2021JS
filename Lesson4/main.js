@@ -97,4 +97,95 @@
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
-let obj=[{id:1,name:'Vasia',age:19},{id:1,name:'Vasia',age:19},{id:1,name:'Vasia',age:19}]
+
+// let obj=[{id:1,name:'Vasia',age:19},{id:2,name:'Oleg',age:49},{id:3,name:'Ivan',age:35}];
+//
+// function printObj(object){
+//     for (const objectElement of object) {
+//         document.write(`${objectElement.id}`)
+//         document.write(`<ul>`)
+//         for (const objectElementKey in objectElement) {
+//             document.write(`<li>${objectElementKey}-${objectElement[objectElementKey]}</li>`);
+//         }
+//         document.write(`</ul>`)
+//     }
+// }
+// printObj(obj);
+
+                                                // CLASSWORK
+// - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+// function min(a, b, c,) {
+//     let min=a;
+//     if (b<min){min=b}
+//     if(c<min){min=c}
+//     console.log(min)
+// }
+// min(1, 5, 0);
+// min(-1, 7, 1);
+// min(3, 0, -9);
+
+// - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+// function max(a, b, c,) {
+//     let max=a;
+//     if (b>max){max=b}
+//     if(c>max){max=c}
+//     console.log(max)
+// }
+// max(1, 5, 0);
+// max(-1, 7, 1);
+// max(3, 0, -9);
+
+// - створити функцію яка повертає найбільше число з масиву
+// let arrNum=[1, 2, 3, 4, 5, 34, 76, 67, 55, 4, 4, 32, 234];
+// function maxNumberOfArray(array){
+//     let maxNum=array[0];
+//     for (const arrayElement of array) {
+//         if(maxNum<arrayElement){maxNum=arrayElement}
+//     }
+//     console.log(maxNum);
+//     return maxNum;
+// }
+// maxNumberOfArray(arrNum);
+
+// - створити функцію яка повертає найменьше число з масиву
+// let arrNum=[1, 2, 3, 4, 5, -34, 76, 67, 55, 4, 4, 32, 234];
+// function maxNumberOfArray(array){
+//     let minNum=array[0];
+//     for (const arrayElement of array) {
+//         if(minNum>arrayElement){minNum=arrayElement}
+//     }
+//     console.log(minNum);
+//     return minNum;
+// }
+// maxNumberOfArray(arrNum);
+
+// - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+// let arrNum=[1, 2, 3, 4, 5];
+// function SumOfArray(array){
+//     let sum=0;
+//     for (const arrayElement of array) {
+//         sum=sum+arrayElement;
+//     }
+//     console.log(sum);
+//     return sum;
+// }
+// SumOfArray(arrNum);
+// - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+// let arrNum=[1, 2, 3, 4, 5];
+// function averegeOfArray(array){
+//     let sum=0;
+//     let i=0;
+//     for (const arrayElement of array) {
+//         sum=sum+arrayElement;
+//         i++;
+//     }
+//     console.log(sum/i);
+//     return sum/i;
+// }
+// averegeOfArray(arrNum);
+// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+
+// - створити функцію яка заповнює масив рандомними числами
+// (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+// - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+// - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
