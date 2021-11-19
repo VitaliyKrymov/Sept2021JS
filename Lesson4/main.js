@@ -1,4 +1,4 @@
-// HOMEWORK
+                                                // HOMEWORK
 
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 //
@@ -82,19 +82,6 @@
 // arrMix(arrMixNumStrBool);
 
 
-
-// function arrMix(arrayMix) {
-//     document.write(`<ul>`)
-//    for (let i of arguments) {
-//         document.write(`<li>${i}</li>`)
-//            }
-//     document.write(`</ul>`)
-//     console.log(n)
-// }
-//
-// arrMix(1, "Vasia", 3, 4, 5, true, 76, 67, false, 4, 4, "Ira", 234);
-
-
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
 
@@ -112,7 +99,7 @@
 // }
 // printObj(obj);
 
-                                                // CLASSWORK
+// CLASSWORK
 // - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
 // function min(a, b, c,) {
 //     let min=a;
@@ -183,9 +170,134 @@
 //     return sum/i;
 // }
 // averegeOfArray(arrNum);
-// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-// - створити функцію яка заповнює масив рандомними числами
-// (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
-// - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+// function arrMinReturnMaxPrint(arrayMix) {
+//     let min=arguments[0];
+//     let max=arguments[0];
+//    for (let i of arguments) {
+//       if (min>i){min=i};
+//       if (max<i){max=i};
+//        }
+//     document.write(max);
+//     return min;
+// }
+// console.log(arrMinReturnMaxPrint(1, 3, 4, -5, 76, 67, 4, 4, 234));
+
+// - створити функцію яка заповнює масив рандомними числами (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+// let arr = [];
+// function randomArr(size,minNumber,maxNumber){
+// let i=0;
+// while (i<size){
+//       arr[i] = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+//       i++;
+// }
+// return arr;
+// }
+//
+// console.log(randomArr(10,100,-5));
+
+
+// - створити функцію яка заповнює масив рандомними числами в діапазоні
+// від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+//  let arr = [];
+// function randomArrLimit(size,minNumber,limit){
+// let i=0;
+// while (i<size){
+//       arr[i] = Math.floor(Math.random() * (limit - minNumber + 1)) + minNumber;
+//       i++;
+// }
+// return arr;
+// }
+//
+// console.log(randomArrLimit(10,0,5));
+
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+// let arrNum = [1, 2, 3, 4, 5];
+// let newArr = [];
+// function arrReverse(arr) {
+//     let n = arr.length;
+//     for (let i of arr) {
+//         newArr[(n - 1)] = i;
+//         n--;
+//     }
+//     return newArr;
+// }
+//
+// console.log(arrReverse(arrNum));
+
+//                                              ADDITIONAL
+
+// - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
+
+// function ifOneOrMoreArguments(first, second) {
+//     console.log()
+//     if (arguments.length === 1) {
+//         document.write(`${first}<br>`);
+//     }
+//     if (arguments.length === 2){
+//         document.write(`${first}+${second}=${first + second}`)
+//     }
+// }
+// ifOneOrMoreArguments(4);
+// ifOneOrMoreArguments(4,67);
+
+// - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
+//   EXAMPLE:
+//   [1,2,3,4]
+//   [2,3,4,5]
+//   результат
+//   [3,5,7,9]
+
+// let array1=[1,2,3,4,10];
+// let array2=[2,3,4,5,9];
+// let newArr = [];
+//
+// function sumatopArrs(arr1,arr2){
+//     for ( i = 0; i < arr1.length ; i++) {
+//         newArr[i]=arr1[i]+arr2[i];
+//     }
+//     return newArr;
+// }
+//
+// console.log(sumatopArrs(array1,array2));
+//
+// - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+//   EXAMPLE:
+//   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
+
+// let arrOfObjects=[{name: 'Dima', age: 13}, {model: 'Camry'},{price:19000,year:2020}];
+// let newArr = [];
+// function keysOfArr(arr){
+//     let i=0;
+//     for (const arrElement of arr) {
+//         let oneObject=arrElement;
+//         for (const oneObjectKey in oneObject) {
+//             newArr[i]=oneObjectKey;
+//             i++
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(keysOfArr(arrOfObjects));
+//
+// - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+//   EXAMPLE:
+//   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+let arrOfObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}, {price: 19000, year: 2020}];
+let newArr = [];
+
+function valueOfArr(arr) {
+    let i = 0;
+    for (const arrElement of arr) {
+        let oneObject = arrElement;
+
+        for (const fild in arrElement) {
+
+            newArr[i] = oneObject[fild];
+            i++
+        }
+    }
+        return newArr;
+    }
+    console.log(valueOfArr(arrOfObjects));

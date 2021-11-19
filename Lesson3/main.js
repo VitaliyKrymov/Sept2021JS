@@ -197,7 +197,7 @@
 // в зворотньому циклі(с заду на перед)
 
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// let i=arrayNumbers.length;
+// let i=arrayNumbers.length-1;
 // while (i>=0){
 //     console.log(arrayNumbers[i]);
 //     i--;
@@ -215,7 +215,7 @@
 // в зворотньому циклі(с заду на перед)
 
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// for (let i =arrayNumbers.length ; i >=0 ; i--) {
+// for (let i =arrayNumbers.length-1 ; i >=0 ; i--) {
 //     console.log(arrayNumbers[i]);
 // }
 
@@ -232,7 +232,7 @@
 
 // в зворотньому циклі(с заду на перед)
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// let i=arrayNumbers.length;
+// let i=arrayNumbers.length-1;
 // while(i>=0){
 //     if(i%2){
 //         console.log(arrayNumbers[i])}
@@ -253,14 +253,9 @@
 
 // в зворотньому циклі(с заду на перед)
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// let arrayReturn = [];
-// let i=0;
-// for (const arrayNumbersKey in arrayNumbers) {
-//     if (arrayNumbersKey%2){arrayReturn[i]=arrayNumbers[arrayNumbersKey]}
-//     i++
-// }
-// for ( i = arrayReturn.length; i >=0; i--) {
-//     console.log(arrayReturn[i])
+//
+// for ( i = arrayNumbers.length-1; i >=0; i--) {
+//     console.log(arrayNumbers[i])
 //     }
 
 
@@ -276,7 +271,7 @@
 
 // в зворотньому циклі(с заду на перед)
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// let i = arrayNumbers.length;
+// let i = arrayNumbers.length-1;
 // while (i >=0 ) {
 //    if (!(arrayNumbers[i] % 2)){console.log(arrayNumbers[i])}
 //    i--
@@ -295,7 +290,7 @@
 
 // в зворотньому циклі(с заду на перед)
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// let i=arrayNumbers.length;
+// let i=arrayNumbers.length-1;
 // for (i;i>=0; i--){
 //     if(!(arrayNumbers[i] % 2)){console.log(arrayNumbers[i])}
 // }
@@ -314,8 +309,8 @@
 // в зворотньому циклі(с заду на перед)
 
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-
-// let i=arrayNumbers.length;
+//
+// let i=arrayNumbers.length-1;
 // for (i;i>=0; i--){
 //     if(!(arrayNumbers[i] % 3)){arrayNumbers[i]='okten'}
 //     console.log(arrayNumbers[i]);
@@ -325,8 +320,8 @@
 // 8. вивести масив в зворотньому порядку.
 
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
-// debugger
-// for (let i=arrayNumbers.length;i>=0;i--){
+//
+// for (let i=arrayNumbers.length-1;i>=0;i--){
 //     console.log(arrayNumbers[i])
 // }
 
@@ -533,25 +528,19 @@
  ];
 
  let newArr=[];
-
- for(let i=0; i<citiesWithId.length;i++){
-
-             // console.log(citiesWithId[i].user_id)
-             //
-             // console.log(usersWithId[(citiesWithId[i].user_id)-1])
-             //
-             // console.log(citiesWithId[i])
-// newArr[(citiesWithId[i].user_id)-1]=usersWithId[(citiesWithId[i].user_id)-1]+citiesWithId[i]// как добавить поле к существующему обьекту не знаю
-     newArr[(citiesWithId[i].user_id)-1]=usersWithId[(citiesWithId[i].user_id)-1];
-     newArr[(citiesWithId[i].user_id)-1].address=citiesWithId[i]
-
-
- }
-console.log(newArr[1])      //похоже что получилось!!!
+let i=0;
+for (const user of usersWithId) {
+    for (const address of citiesWithId) {
+        if(user.id === address.user_id){
+            newArr[i]=user;
+            newArr[i].address=address;
+        }
+    }i++
+}
+console.log(newArr)
+//Right variant
 //
 //
-//
-//         - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 //
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 //
