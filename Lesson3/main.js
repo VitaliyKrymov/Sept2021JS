@@ -407,27 +407,24 @@
 //     }
 //     console.log(arr);
 
-                                                // mistakes bellow !!!!!!!!!
 
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
 // let arr = [];
 // let arrNew = [];
-// let k=0;
+// let k = 0;
 // let i = 0;
 // while (i < 20) {
 //     arr[i] = Math.floor(Math.random() * (732 - 8 + 1)) + 8;
-//     if (!(i % 3)) {
-//         if (i !== 0) {
-//             if (!((arr[i - 1]) % 2)) {
-//                 arrNew[k]=arr[i - 1];
-//                 k++
-//             }
+//     if (i % 3 === 0 && i !== 0) {
+//         if (arr[i - 1] % 2 === 0) {
+//             arrNew[k] = arr[i - 1];
+//             k++
 //         }
 //     }
-//         i++
-//     }
-//     console.log(arr);
-//     console.log(arrNew);
+//     i++
+// }
+// console.log(arr);
+// console.log(arrNew);
 
 
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
@@ -435,7 +432,7 @@
 
 // let arr = [1, 2, 3, 5, 7, 9, 56, 8, 67];
 // for (i = 0; i < arr.length; i++) {
-//     if (!((arr[i + 1]) % 2)) {
+//     if (arr[i + 1] % 2 === 0) {
 //         if (i < arr.length - 1) {
 //             console.log(arr[i])
 //         }
@@ -471,7 +468,6 @@
 //  let arr = [100,true,250,false,{age:16},"120",345,"188"];
 // let arrNew = [];
 // let i=0;
-// debugger
 // for (const arrElement of arr) {
 //     if(typeof arrElement ==='number'){
 //     arrNew[i]=arrElement;
@@ -513,6 +509,7 @@
 //             },
 //             // TO BE CONTINUED .....
 //         ]
+
 //      let usersWithId = [
 //          {id: 1, name: 'vasya', age: 31, status: false},
 //          {id: 2, name: 'petya', age: 30, status: true},
@@ -538,7 +535,7 @@
 //     }i++
 // }
 // console.log(newArr)
-//Right variant
+
 //
 //
 //
