@@ -377,16 +377,17 @@
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+//variant1
 // let arrOfObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}, {price: 19000, year: 2020}];
 // let newArr = [];
 //
-//variant1
-
 // function valueOfArr(arr) {
 //     let i = 0;
 //     for (const arrElement of arr) {
 //         let oneObject = arrElement;
 //         for (const fild in arrElement) {
+//             console.log(fild)
 //             newArr[i] = oneObject[fild];
 //             i++
 //         }
