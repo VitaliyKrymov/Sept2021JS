@@ -28,10 +28,10 @@
 
 // - створити функцію яка  створює параграф з текстом. Текст задати через аргумент
 
-let criareParagraph=(text)=> document.write(`<p>Hello  ${text} 👋</p>`);
+let criateParagraph=(text)=> document.write(`<p>Hello  ${text} 👋</p>`);
 
-criareParagraph('Vasia');
-criareParagraph('Petia');
+criateParagraph('Vasia');
+criateParagraph('Petia');
 
 
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
