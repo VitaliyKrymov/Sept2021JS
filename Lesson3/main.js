@@ -265,7 +265,9 @@
 // let arrayNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 // let i = 0;
 // while (i < arrayNumbers.length) {
-//    if (arrayNumbers[i] % 2){} else{console.log(arrayNumbers[i])}
+//     if ( arrayNumbers[i] % 2 === 0 ) {
+//         console.log( arrayNumbers[i] )
+//     }
 //    i++
 //  }
 
@@ -328,17 +330,17 @@
 // 9. всі попередні завдання(окрім 8), але в зворотньому циклі(с заду на перед)
 
 
-                                       // ADDITIONAL
+// ADDITIONAL
 
 
 // 1. Створити пустий масив та :
 //     a. заповнити його 50 парними числами за допомоги циклу.
 // let arr = [];
 // for (let i = 0; i <= 49; i++) {
-//     if (!(i % 2)){
+//     if (i % 2 === 0 ){
 //         arr[i] = i;
 //     }
-//     if (i % 2){
+//     else{
 //         arr[i] = i + 1;
 //     }
 //  }
@@ -349,10 +351,10 @@
 // let arr = [];
 // let i=0;
 // while (i<50){
-//     if (!(i % 2)){
+//     if (i % 2 ===0){
 //         arr[i] = (i+2)*2-1;
 //     }
-//     if (i % 2){
+//     else{
 //         arr[i] = i;
 //     }
 //     i++
@@ -383,10 +385,8 @@
 // let i = 0;
 // while (i < 20) {
 //     arr[i] = Math.floor(Math.random() * (732 - 8 + 1)) + 8;
-//     if (!(i % 3)) {
-//         if (i !== 0) {
-//             console.log(arr[i - 1]);
-//         }
+//     if (i % 3 === 0 && i !==0) {
+//         console.log(arr[i-1]);
 //     }
 //     i++
 // }
@@ -398,36 +398,33 @@
 // let i = 0;
 // while (i < 20) {
 //     arr[i] = Math.floor(Math.random() * (732 - 8 + 1)) + 8;
-//     if (!(i % 3)) {
-//         if (i !== 0) {
-//             if (!((arr[i - 1]) % 2)) {
-//                 console.log(arr[i - 1])
+//     if (i % 3 ===0 && i !==0) {
+//            if (arr[i-1] % 2 ===0) {
+//                 console.log(arr[i-1])
 //             }
-//         }
 //     }
 //         i++
 //     }
 //     console.log(arr);
 
+
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
 // let arr = [];
 // let arrNew = [];
-// let k=0;
+// let k = 0;
 // let i = 0;
 // while (i < 20) {
 //     arr[i] = Math.floor(Math.random() * (732 - 8 + 1)) + 8;
-//     if (!(i % 3)) {
-//         if (i !== 0) {
-//             if (!((arr[i - 1]) % 2)) {
-//                 arrNew[k]=arr[i - 1];
-//                 k++
-//             }
+//     if (i % 3 === 0 && i !== 0) {
+//         if (arr[i - 1] % 2 === 0) {
+//             arrNew[k] = arr[i - 1];
+//             k++
 //         }
 //     }
-//         i++
-//     }
-//     console.log(arr);
-//     console.log(arrNew);
+//     i++
+// }
+// console.log(arr);
+// console.log(arrNew);
 
 
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
@@ -435,7 +432,7 @@
 
 // let arr = [1, 2, 3, 5, 7, 9, 56, 8, 67];
 // for (i = 0; i < arr.length; i++) {
-//     if (!((arr[i + 1]) % 2)) {
+//     if (arr[i + 1] % 2 === 0) {
 //         if (i < arr.length - 1) {
 //             console.log(arr[i])
 //         }
@@ -471,7 +468,6 @@
 //  let arr = [100,true,250,false,{age:16},"120",345,"188"];
 // let arrNew = [];
 // let i=0;
-// debugger
 // for (const arrElement of arr) {
 //     if(typeof arrElement ==='number'){
 //     arrNew[i]=arrElement;
@@ -513,32 +509,33 @@
 //             },
 //             // TO BE CONTINUED .....
 //         ]
-     let usersWithId = [
-         {id: 1, name: 'vasya', age: 31, status: false},
-         {id: 2, name: 'petya', age: 30, status: true},
-         {id: 3, name: 'kolya', age: 29, status: true},
-         {id: 4, name: 'olya', age: 28, status: false}
-     ];
 
- let citiesWithId = [
-     {user_id: 3, country: 'USA', city: 'Portland'},
-     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
-     {user_id: 2, country: 'Poland', city: 'Krakow'},
-     {user_id: 4, country: 'USA', city: 'Miami'}
- ];
+//      let usersWithId = [
+//          {id: 1, name: 'vasya', age: 31, status: false},
+//          {id: 2, name: 'petya', age: 30, status: true},
+//          {id: 3, name: 'kolya', age: 29, status: true},
+//          {id: 4, name: 'olya', age: 28, status: false}
+//      ];
+//
+//  let citiesWithId = [
+//      {user_id: 3, country: 'USA', city: 'Portland'},
+//      {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+//      {user_id: 2, country: 'Poland', city: 'Krakow'},
+//      {user_id: 4, country: 'USA', city: 'Miami'}
+//  ];
+//
+//  let newArr=[];
+// let i=0;
+// for (const user of usersWithId) {
+//     for (const address of citiesWithId) {
+//         if(user.id === address.user_id){
+//             newArr[i]=user;
+//             newArr[i].address=address;
+//         }
+//     }i++
+// }
+// console.log(newArr)
 
- let newArr=[];
-let i=0;
-for (const user of usersWithId) {
-    for (const address of citiesWithId) {
-        if(user.id === address.user_id){
-            newArr[i]=user;
-            newArr[i].address=address;
-        }
-    }i++
-}
-console.log(newArr)
-//Right variant
 //
 //
 //

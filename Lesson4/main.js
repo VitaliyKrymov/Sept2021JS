@@ -1,4 +1,4 @@
-                                                // HOMEWORK
+// HOMEWORK
 
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 //
@@ -64,20 +64,17 @@
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-// let arrMixNumStrBool=[1, "Vasia", 3, 4, 5, true, 76, 67, false, 4, 4, "Ira", 234];
+// let arrMixNumStrBool = [1, "Vasia", 3, 4, 5, true, 76, 67, false, 4, 4, "Ira", 234];
 //
 // function arrMix(arrayMixs) {
 //     document.write(`<ul>`)
-//
 //     for (const arrayMix1 of arrayMixs) {
-//         document.write(`<li>${arrayMix1}</li>`)
-//     }
-//     // for (const i of arrayMix) {
-//     //
-//     //
-//     // }
-//     document.write(`</ul>`)
-//     console.log(n)
+//         if (typeof arrayMix1 == 'string') {
+//             document.write(`<li>😎 ${arrayMix1}</li>`)
+//         } else {
+//             document.write(`<li>${arrayMix1}</li>`)
+//         }
+//     }document.write(`</ul>`)
 // }
 // arrMix(arrMixNumStrBool);
 
@@ -99,32 +96,91 @@
 // }
 // printObj(obj);
 
-                                                                  // CLASSWORK
-
-
+// CLASSWORK
 
 
 // - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-// function min(a, b, c,) {
+
+// function minNumber(a, b, c,) {
 //     let min=a;
 //     if (b<min){min=b}
 //     if(c<min){min=c}
 //     console.log(min)
 // }
-// min(1, 5, 0);
-// min(-1, 7, 1);
-// min(3, 0, -9);
+// minNumber(1, 5, 0);
+// minNumber(-1, 7, 1);
+// minNumber(3, 0, -9);
+
+
+// function minNumber(a, b, c,) {
+//     let min;
+//     if (a < b && a < c) {
+//          min = a;
+//     }
+//     if (b < a && b < c) {
+//          min = b;
+//     } else {
+//          min = c;
+//     }
+//    return min;
+// }
+//
+// console.log(minNumber(1, 5, 0));
+// console.log(minNumber(-1, 7, 1));
+// console.log(minNumber(3, 0, -9));
+// console.log(minNumber(3, 3, 3));
 
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-// function max(a, b, c,) {
+// variant1
+// function maxNumber(a, b, c,) {
 //     let max=a;
 //     if (b>max){max=b}
 //     if(c>max){max=c}
-//     console.log(max)
+//    return max;
 // }
-// max(1, 5, 0);
-// max(-1, 7, 1);
-// max(3, 0, -9);
+//
+// console.log(maxNumber(1, 5, 0));
+// console.log(maxNumber(-1, 7, 1));
+// console.log(maxNumber(3, 0, -9));
+
+// variant2
+//
+// function maxNumber(a, b, c,) {
+//     let max;
+//     if (a > b && a > c) {
+//          max = a;
+//     }
+//     if (b > a && b > c) {
+//          max = b;
+//     }
+//     if (c > a && c > b) {
+//          max = c;
+//     }
+//     if (a === b && a === c) {
+//          max = a;
+//     }
+//     return max;
+// }
+//
+// console.log(maxNumber(1, 5, 0)) ;
+// console.log(maxNumber(-1, 7, 1));
+// console.log(maxNumber(3, 0, -9));
+// console.log(maxNumber(30, 30, 30));
+
+// variant3
+
+// function maxNumber(a, b, c,) {
+//     let max=arguments[0];
+//     for (const aElement of arguments) {
+//       if (aElement > max){max=aElement}
+//     }
+//     return max;
+// }
+// console.log(maxNumber(1, 5, 0)) ;
+// console.log(maxNumber(-1, 7, 1));
+// console.log(maxNumber(3, 0, -9));
+// console.log(maxNumber(30, 30, 30));
+
 
 // - створити функцію яка повертає найбільше число з масиву
 // let arrNum=[1, 2, 3, 4, 5, 34, 76, 67, 55, 4, 4, 32, 234];
@@ -161,19 +217,17 @@
 //     return sum;
 // }
 // SumOfArray(arrNum);
+
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-// let arrNum=[1, 2, 3, 4, 5];
+// let arrNum=[1, 2, 3, 4, 1000];
 // function averegeOfArray(array){
 //     let sum=0;
-//     let i=0;
 //     for (const arrayElement of array) {
 //         sum=sum+arrayElement;
-//         i++;
 //     }
-//     console.log(sum/i);
-//     return sum/i;
+//     return sum/array.length;
 // }
-// averegeOfArray(arrNum);
+// console.log(averegeOfArray(arrNum)) ;
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 // function arrMinReturnMaxPrint(arrayMix) {
@@ -186,6 +240,25 @@
 //     document.write(max);
 //     return min;
 // }
+// console.log(arrMinReturnMaxPrint(1, 3, 4, -5, 76, 67, 4, 4, 234));
+
+// function arrMinReturnMaxPrint(arrayMix) {
+//     let min = arguments[0];
+//     let max = arguments[0];
+//     for (let i of arguments) {
+//         if (min > i) {
+//             min = i
+//         }
+//         ;
+//         if (max < i) {
+//             max = i
+//         }
+//         ;
+//     }
+//     document.write(max);
+//     return min;
+// }
+//
 // console.log(arrMinReturnMaxPrint(1, 3, 4, -5, 76, 67, 4, 4, 234));
 
 // - створити функцію яка заповнює масив рандомними числами (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
@@ -231,11 +304,7 @@
 // console.log(arrReverse(arrNum));
 
 
-
-
 //                                                                         ADDITIONAL
-
-
 
 
 // - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
@@ -290,24 +359,56 @@
 //     return newArr;
 // }
 // console.log(keysOfArr(arrOfObjects));
+
+//variant2
+// let arrOfObjects=[{name: 'Dima', age: 13}, {model: 'Camry'},{price:19000,year:2020}];
+// let newArr = [];
+// function keysOfArr(arr){
+//        for (const arrElement of arr) {
+//         let oneObject=arrElement;
+//         for (const oneObjectKey in oneObject) {
+//             newArr.push(oneObjectKey);
+//         }
+//     }
+//     return newArr;
+// }
+// console.log(keysOfArr(arrOfObjects));
 //
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
-let arrOfObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}, {price: 19000, year: 2020}];
-let newArr = [];
 
-function valueOfArr(arr) {
-    let i = 0;
-    for (const arrElement of arr) {
-        let oneObject = arrElement;
+//variant1
+// let arrOfObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}, {price: 19000, year: 2020}];
+// let newArr = [];
+//
+// function valueOfArr(arr) {
+//     let i = 0;
+//     for (const arrElement of arr) {
+//         let oneObject = arrElement;
+//         for (const fild in arrElement) {
+//             console.log(fild)
+//             newArr[i] = oneObject[fild];
+//             i++
+//         }
+//     }
+//         return newArr;
+//     }
+//     console.log(valueOfArr(arrOfObjects));
 
-        for (const fild in arrElement) {
+//variant2
 
-            newArr[i] = oneObject[fild];
-            i++
-        }
-    }
-        return newArr;
-    }
-    console.log(valueOfArr(arrOfObjects));
+// let arrOfObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}, {price: 19000, year: 2020}];
+// let newArr = [];
+//
+// function valueOfArr(arr) {
+//     for (const arrElement of arr) {
+//         let oneObject = arrElement;
+//         for (const fild in arrElement) {
+//             newArr.push(oneObject[fild]);
+//         }
+//     }
+//     return newArr;
+// }
+//
+// console.log(valueOfArr(arrOfObjects));
