@@ -329,9 +329,19 @@
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
 
-let str="Сила тяжести приложена к центру масс тела";;
-let stringToarray=(str,size)=>{
-    return str.split(' ').slice(0,size).join(' ');
-}
+// let str="Сила тяжести приложена к центру масс тела";;
+// let stringToarray=(str,size)=>{
+//     return str.split(' ').slice(0,size).join(' ');
+// }
+//
+// document.writeln(stringToarray(str,5));
 
-document.writeln(stringToarray(str,5));
+let numbers = [9, 6, 50, 3, 0, 64, 5, 8, 4, 88];
+let fooString = (item) => item.toString();
+
+let mapMassif = (arg, callback) => {
+    let newArg = arg.map(callback)
+
+    return newArg
+}
+console.log(mapMassif(numbers, fooString))

@@ -1,14 +1,75 @@
 //Homework
 
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+
+// function User(userID,userName,userSername,userEmail,userPhone){
+//     this.id= userID,
+//         this.name= userName,
+//         this.sername= userSername,
+//         this.email= userEmail,
+//         this.phone= userPhone
+// };
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
+// let users=[];
+// users.push(new User(1,'Viktor','Pupkin','pupV@gmail.com','+380952356731'));
+// users.push(new User(2,'Vasiliy','Petpov','petrov@gmail.com','+380952356732'));
+// users.push(new User(3,'Viacheslav','Smith','smithV@gmail.com','+380632356730'));
+// users.push(new User(4,'Vladimir','Ivanov','Ivanov@gmail.com','+380632356535'));
+// users.push(new User(5,'Valentin','Ermolin','Valentin@gmail.com','+380632356730'));
+// users.push(new User(6,'Oleg','Petrov','Oleg@gmail.com','+380632356730'));
+// users.push(new User(7,'Taras','Sergeev','Taras456@gmail.com','+380632356730'));
+// users.push(new User(8,'Georgiy','Panov','Georgiy34@gmail.com','+380634356730'));
+// users.push(new User(9,'Ivan','Nazarenko','Ivan1987@gmail.com','+380632456930'));
+// users.push(new User(10,'Nikolay','Shestak','Nikolay23@gmail.com','+380632396739'));
+// console.log(users);
 //
 // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+// let users=[];
+// users.push(new User(1,'Viktor','Pupkin','pupV@gmail.com','+380952356731'));
+// users.push(new User(8,'Vasiliy','Petpov','petrov@gmail.com','+380952356732'));
+// users.push(new User(3,'Viacheslav','Smith','smithV@gmail.com','+380632356730'));
+// users.push(new User(6,'Vladimir','Ivanov','Ivanov@gmail.com','+380632356535'));
+// users.push(new User(5,'Valentin','Ermolin','Valentin@gmail.com','+380632356730'));
+// users.push(new User(2,'Oleg','Petrov','Oleg@gmail.com','+380632356730'));
+// users.push(new User(7,'Taras','Sergeev','Taras456@gmail.com','+380632356730'));
+// users.push(new User(4,'Georgiy','Panov','Georgiy34@gmail.com','+380634356730'));
+// users.push(new User(9,'Ivan','Nazarenko','Ivan1987@gmail.com','+380632456930'));
+// users.push(new User(10,'Nikolay','Shestak','Nikolay23@gmail.com','+380632396739'));
+// console.log(users);
 //
+// let filterUsers =users.filter(value => value.id%2 === 0);
+// console.log(filterUsers)
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 //
+// let sortedUsers =users.sort((user1,user2) => user1.id-user2.id);
+// console.log(sortedUsers);
+
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+
+class Client{
+    constructor(id, name, surname , email, phone, order) {
+        this.id=id||(Math.floor(Math.random()*100));
+        this.name=name||'noName';
+        this.surname=surname||'noSurname';
+        this.email=email||'noEmail@ukr.net';
+        this.phone=phone||'+380950000000';
+        this.order=order|| ['water','bred','C2H5OH'];
+    }
+}
 // створити пустий масив, наповнити його 10 об'єктами Client
+let clients=[];
+clients.push(new Client(1,'Viktor','Pupkin','pupV@gmail.com','+380952356731',['bread','milk','meat','juse','apples','cake','shuger','vine','rom','bear']));
+clients.push(new Client(8,'Vasiliy','Petpov','petrov@gmail.com','+380952356732',[,'milk','meat','juse','apples','cake','shuger','vine','rom','bear']));
+clients.push(new Client(3,'Viacheslav','Smith','smithV@gmail.com','+380632356730',['bread','milk','chicken','juse','apples','cake','shuger','vine','rom','bear']));
+clients.push(new Client(6,'Vladimir','Ivanov','Ivanov@gmail.com','+380632356535',['water','meat','juse','apples','bear']));
+clients.push(new Client(5,'Valentin','Ermolin','Valentin@gmail.com','+380632356730',['bread','milk','meat','chicken','juse','apples','cake','shuger','vine','rom','bear']));
+clients.push(new Client(2,'Oleg','Petrov','Oleg@gmail.com','+380632356730',['bread','milk','meat','juse','apples','cake','vine','bear']));
+clients.push(new Client(7,'Taras','Sergeev','Taras456@gmail.com','+380632356730',['vine','rom','bear']));
+clients.push(new Client(4,'Georgiy','Panov','Georgiy34@gmail.com','+380634356730',['bread','milk']));
+clients.push(new Client(9,'Ivan','Nazarenko','Ivan1987@gmail.com','+380632456930',['bread','water','chicken','cake','rom',]));
+clients.push(new Client(10,'Nikolay','Shestak','Nikolay23@gmail.com','+380632396739',['bread','milk','meat','apples','cake','vine','rom','bear']));
+console.log(clients);
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
 // Classwork
