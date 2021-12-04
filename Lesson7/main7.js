@@ -285,11 +285,11 @@
 // console.log(user1);
 
 
-                                                            // Variant 2
+// Variant 2
 
 class Users {
 
-    constructor(id,name,username,email,address,phone,website,company) {
+    constructor(id, name, username, email, address, phone, website, company) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -300,27 +300,32 @@ class Users {
         this.company = company;
     }
 }
-class address{
-       constructor(street,city,zipcode,geo) {
+
+class address {
+    constructor(street, city, zipcode, geo) {
         this.street = street;
         this.city = city;
         this.zipcode = zipcode;
         this.geo = geo;
     }
 }
-class geo{
+
+class geo {
     lat;
     lng;
-    constructor(lat,lng) {
+
+    constructor(lat, lng) {
         this.lat = lat;
         this.lng = lng;
     }
 }
-class company{
+
+class company {
     name;
     catchPhrase;
     bs;
-    constructor(name,catchPhrase,bs) {
+
+    constructor(name, catchPhrase, bs) {
         this.name = name;
         this.catchPhrase = catchPhrase;
         this.bs = bs;
@@ -330,7 +335,7 @@ class company{
 
 }
 
-let  user1 = new Users(1,'Leanne Graham','Bret','Sincere@april.biz',new address( 'Kulas Light', 'Gwenborough', '92998-3874',new geo('-37.3159','81.1496')),'1-770-736-8031 x56442','hildegard.org',new company('Romaguera-Crona','Multi-layered client-server neural-net','harness real-time e-markets'));
+let user1 = new Users(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz', new address('Kulas Light', 'Gwenborough', '92998-3874', new geo('-37.3159', '81.1496')), '1-770-736-8031 x56442', 'hildegard.org', new company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'harness real-time e-markets'));
 console.log(user1);
 
 //
