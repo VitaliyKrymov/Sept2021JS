@@ -266,7 +266,7 @@
 //         bs: 'harness real-time e-markets'
 // }
 // }
-//                                        // Variant 1
+//                                                         // Variant 1
 // class Users {
 //
 //     constructor(id,name,username,email,address,phone,website,company) {
