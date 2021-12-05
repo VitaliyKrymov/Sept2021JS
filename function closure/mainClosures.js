@@ -12,8 +12,8 @@
 // console.log(uw);
 // console.log(uw.xxx());
 
-function users(){
-    let user = {};
+function users(name,age,status){
+    let user = {name:name,age:age,status:status};
 
     let userWorker={
         getUser: function (password){
@@ -57,7 +57,7 @@ function users(){
     return userWorker
 }
 
-let uw=users();
+let uw=users('Vasia',20,true);
 console.log(uw);
 console.log(uw.getUser('getUser'));
 console.log('age=',uw.setAge('set1',50));
