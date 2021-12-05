@@ -36,7 +36,6 @@
 //
 //     - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
 // -- отримує текст з параграфа з id "content"
-document.getElementById('main_header');
 // -- отримує текст з блоку з id "rules"
 // -- замініть текст параграфа з id 'content' на будь-який інший
 // -- замініть текст параграфа з id 'rules' на будь-який інший
