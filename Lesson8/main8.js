@@ -1,17 +1,3 @@
-// function fo (){
-//     let x=100;
-//     let userWorker ={
-//         getage:function(){
-//
-//             console.log(x);
-//         }
-//     }
-//     return userWorker
-// }
-// console.log('57936');
-// let um=fo(5);
-// console.log(um);
-// // uw.xxx();
 
 // Взяти файл template_2.html та працювати в ньому
 // 1) Напишіть код, який :
@@ -36,7 +22,6 @@
 //
 //     - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
 // -- отримує текст з параграфа з id "content"
-document.getElementById('main_header');
 // -- отримує текст з блоку з id "rules"
 // -- замініть текст параграфа з id 'content' на будь-який інший
 // -- замініть текст параграфа з id 'rules' на будь-який інший
