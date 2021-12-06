@@ -51,6 +51,7 @@
 
     let allClasses = [];
     let allElements = document.querySelectorAll('*');
+    console.log(allElements);
     for (let i = 0; i < allElements.length; i++) {
         let classes = allElements[i].className.toString().split(' ');
         for (let j = 0; j < classes.length; j++) {
@@ -61,6 +62,8 @@
     }
 
     console.log(allClasses);
+
+
 </script>
 </body>
 </html>
