@@ -23,12 +23,12 @@
     </style>
 </head>
 <body>
-<h3>1 завдання</h3>
+<!--<h3>1 завдання</h3>-->
 <hr>
 
-<div id="text"><h1>Hello</h1></div>
+<!--<div id="text"><h1>Hello</h1></div>-->
 
-<input type="button" id="button" value="Натисни, щоб сховати текст"/>
+<!--<input type="button" id="button" value="Натисни, щоб сховати текст"/>-->
 
 
 <h3>2 завдання</h3>
@@ -53,16 +53,33 @@
 <script>
     // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
     //     - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
-    document.body.id = "unique_id";
-    document.getElemetsByTagName('body')[0].id = "unique_id";
-    document.querySelector('body').id = "unique_id";
-    // // 1 варінт ===========================================================
-    let clik = document.getElementById('text');
-    let button = document.getElementById('button');
-    button.onclick = function () {
-        clik.style.display = 'none';
+    let h1Element=document.createElement('h1');
+    h1Element.innerText = "1 завдання";
+    document.body.appendChild(h1Element);
+
+    let divElement=document.createElement('div');
+    divElement.id = "text";
+    divElement.innerText = "Hello";
+    document.body.appendChild(divElement);
+
+    let buttonElement=document.createElement('button');
+    buttonElement.innerText = "Click me and I hidden Hello";
+    document.body.appendChild(buttonElement);
+    buttonElement.onclick=function (){
+        divElement.style.display = 'none'
+        buttonElement.innerText = "Yes!"
     }
 
+    // // 1 варінт ===========================================================
+    // let clik = document.getElementById('text');
+    // let button = document.getElementById('button');
+    // button.onclick = function () {
+    //     clik.style.display = 'none';
+    //
+    // }
+    // document.getElementById('button').onclick = function () {
+    //     document.getElementById('text').hidden = true;   // //те саме що display: none
+    // }
 
     // // 2 варіант ===========================================================
     // document.getElementById('button').onclick = function () {
