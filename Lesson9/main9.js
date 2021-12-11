@@ -552,11 +552,23 @@ for (const user of usersList) {
     let divGeo = document.createElement('div');
     let geoClas = 'geo' + user.id;
     divGeo.classList.add(geoClas);
-    divGeo.style.width = '100px';
-    divGeo.style.height = '65px';
+    divGeo.style.width = '300px';
+    divGeo.style.height = '35px';
+    divGeo.style.display = 'flex';
+    divGeo.style.justifyContent = 'space-around';
+    divGeo.innerText= 'Geo:';
     divGeo.style.border = '5px solid blue';
     document.body.appendChild(divGeo);
 
+    let divCompany = document.createElement('div');
+    let companyClas = 'company' + user.id;
+    divCompany.classList.add(companyClas);
+    divCompany.style.width = '400px';
+    divCompany.style.display = 'flex';
+    divCompany.innerText= 'Company:';
+    divCompany.style.height = '80px';
+    divCompany.style.border = '5px solid yellow';
+    document.body.appendChild(divCompany);
 
     let divCriate = function (value) {
         let div = document.createElement('div');
@@ -564,15 +576,6 @@ for (const user of usersList) {
         div.innerText = value + '\u00A0 ' + '\u00A0 ';
         document.body.getElementsByClassName('header' + user.id)[0].appendChild(div);
     }
-
-    let divCompany = document.createElement('div');
-    let companyClas = 'company' + user.id;
-    divCompany.classList.add(companyClas);
-    divCompany.style.width = '320px';
-    divCompany.style.height = '80px';
-    divCompany.style.border = '5px solid yellow';
-    document.body.appendChild(divCompany);
-
 
     let divHeaderFunction = function (value) {
         let divHeader = document.createElement('div');
@@ -598,6 +601,7 @@ for (const user of usersList) {
         divGeo.style.border = '1px solid pink';
         divGeo.classList.add('address' + user.id);
         divGeo.style.height = '30px';
+        divGeo.style.width = '100px';
         divGeo.innerText = value;
         document.getElementsByClassName(geoClas)[0].appendChild(divGeo);
     }
@@ -606,6 +610,7 @@ for (const user of usersList) {
         let div = document.createElement('div');
         div.style.border = '5px solid brown';
         div.style.height = '30px';
+        div.style.width = '200px';
         div.innerText = value;
         document.body.appendChild(div);
     }
