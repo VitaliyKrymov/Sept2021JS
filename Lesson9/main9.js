@@ -534,8 +534,8 @@ for (const user of usersList) {
     let divWrap = document.createElement('div');
     let clas = 'wrap' + user.id;
     divWrap.classList.add(clas);
-    divWrap.style.width = '400px';
-    divWrap.style.height = '30px';
+    divWrap.style.width = '600px';
+    divWrap.style.height = '40px';
     divWrap.style.alignItems = 'center';
     divWrap.style.background = 'silver';
     divWrap.style.border = '5px solid green';
@@ -563,7 +563,7 @@ for (const user of usersList) {
     let divCompany = document.createElement('div');
     let companyClas = 'company' + user.id;
     divCompany.classList.add(companyClas);
-    divCompany.style.width = '400px';
+    divCompany.style.width = '600px';
     divCompany.style.display = 'flex';
     divCompany.innerText= 'Company:';
     divCompany.style.height = '80px';
