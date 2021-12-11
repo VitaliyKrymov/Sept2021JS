@@ -531,67 +531,129 @@ let usersList = [
 
 for (const user of usersList) {
 
-    let i=0;
     let divWrap = document.createElement('div');
-    let clas='wrap'+i;
-    divWrap.classList.add (clas);
-    divWrap.style.width = '1000px';
-    divWrap.style.height = '40px';
+    let clas = 'wrap' + user.id;
+    divWrap.classList.add(clas);
+    divWrap.style.width = '400px';
+    divWrap.style.height = '30px';
+    divWrap.style.alignItems = 'center';
     divWrap.style.background = 'silver';
-    divWrap.style.border = '1px solid green';
+    divWrap.style.border = '5px solid green';
     document.body.appendChild(divWrap);
 
-    let divFunction1 =function (value){
-        let div=document.createElement('div');
-        div.innerText=value+'.';
-        document.body.getElementsByClassName('header'+i)[0].appendChild(div);
+    let divAddress = document.createElement('div');
+    let addressClas = 'address' + user.id;
+    divAddress.classList.add(addressClas);
+    divAddress.style.width = '300px';
+    divAddress.style.height = '130px';
+    divAddress.style.border = '4px solid green';
+    document.body.appendChild(divAddress);
+
+    let divGeo = document.createElement('div');
+    let geoClas = 'geo' + user.id;
+    divGeo.classList.add(geoClas);
+    divGeo.style.width = '100px';
+    divGeo.style.height = '65px';
+    divGeo.style.border = '5px solid blue';
+    document.body.appendChild(divGeo);
+
+
+    let divCriate = function (value) {
+        let div = document.createElement('div');
+        div.style.border = '1px solid red';
+        div.innerText = value + '\u00A0 ' + '\u00A0 ';
+        document.body.getElementsByClassName('header' + user.id)[0].appendChild(div);
     }
 
+    let divCompany = document.createElement('div');
+    let companyClas = 'company' + user.id;
+    divCompany.classList.add(companyClas);
+    divCompany.style.width = '320px';
+    divCompany.style.height = '80px';
+    divCompany.style.border = '5px solid yellow';
+    document.body.appendChild(divCompany);
 
-    let divHeaderFunction =function (value){
 
-        let divHeader=document.createElement('div');
-        divHeader.classList.add('header'+i);
+    let divHeaderFunction = function (value) {
+        let divHeader = document.createElement('div');
+        divHeader.style.border = '1px solid yellow';
+        divHeader.classList.add('header' + user.id);
         divHeader.style.display = 'flex';
-        divHeader.innerText=value+'.';
-        document.getElementsByClassName('wrap')[0].appendChild(divHeader);
-        console.log(document.getElementsByClassName('wrap')[0].appendChild(divHeader));;
+        divHeader.style.justifyContent = 'space-around';
+        divHeader.style.alignItems = 'center';
+        divHeader.style.height = '20px';
+        document.getElementsByClassName(clas)[0].appendChild(divHeader);
     }
 
+    let divAddressCreate = function (value) {
+        let divAddress = document.createElement('div');
+        divAddress.style.border = '1px solid pink';
+        divAddress.classList.add('address' + user.id);
+        divAddress.style.height = '30px';
+        divAddress.innerText = value;
+        document.getElementsByClassName(addressClas)[0].appendChild(divAddress);
+    }
+    let divGeoCreate = function (value) {
+        let divGeo = document.createElement('div');
+        divGeo.style.border = '1px solid pink';
+        divGeo.classList.add('address' + user.id);
+        divGeo.style.height = '30px';
+        divGeo.innerText = value;
+        document.getElementsByClassName(geoClas)[0].appendChild(divGeo);
+    }
+
+    let blockCriate = function (value) {
+        let div = document.createElement('div');
+        div.style.border = '5px solid brown';
+        div.style.height = '30px';
+        div.innerText = value;
+        document.body.appendChild(div);
+    }
+
+    let companyCriate = function (value) {
+        let divCompany = document.createElement('div');
+        divCompany = document.createElement('div');
+        divCompany.style.border = '1px solid brown';
+        divCompany.style.width = '300px';
+        divCompany.innerText = value;
+        document.getElementsByClassName(companyClas)[0].appendChild(divCompany);
+    }
+
+    divHeaderFunction();
 
     let id = user.id;
-    console.log(id); divHeaderFunction(id);
+    divCriate(id);
+
     let name = user.name;
-    console.log(name);divFunction1(name);
+    divCriate(name);
+
     let username = user.username;
-    console.log(username);divFunction1(username);
+    divCriate(username);
+
     let email = user.email;
-    console.log(email);
+    divCriate(email);
+
 
     let address = user.address;
-    console.log(address);
     for (const addressKey in address) {
         if (typeof address[addressKey] !== 'object') {
-            console.log(addressKey, ':', address[addressKey]);
+            divAddressCreate(address[addressKey])
         } else {
             let geo = address[addressKey];
-            console.log('geo:');
             for (const geoElement in geo) {
-                console.log(geoElement, ':', geo[geoElement]);
+                divGeoCreate(geo[geoElement]);
             }
-
         }
     }
 
     let phone = user.phone;
-    console.log(phone);
+    blockCriate(phone)
+
     let website = user.website;
-    console.log(website);
+    blockCriate(website)
 
     let company = user.company;
-    console.log('company:');
     for (const companyKey in company) {
-        console.log(companyKey,':',company[companyKey])
+        companyCriate(company[companyKey])
     }
-    i++;
 }
