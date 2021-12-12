@@ -8,9 +8,11 @@
         * {
             margin: 5px;
         }
+
         .menu {
             cursor: pointer;
         }
+
         .menu.hidden ul {
             display: none;
         }
@@ -32,155 +34,239 @@
 
 <div id="content"></div>
 <script>
-//                                                  Homework
+    //                                                  Homework
 
 
     // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
 
-    let h2Element = document.createElement('h3');
-    h2Element.innerText = "1 завдання";
-    document.body.appendChild(h2Element);
-
-    let divElement = document.createElement('div');
-    divElement.id = "text";
-    divElement.innerText = "Hello";
-    document.body.appendChild(divElement);
-
-    let buttonElement = document.createElement('button');
-    buttonElement.innerText = "Click me and I hidden Hello";
-    document.body.appendChild(buttonElement);
-    buttonElement.onclick = function () {
-        divElement.style.display = 'none'
-        buttonElement.innerText = "Yes!"
-    }
+    // let h2Element = document.createElement('h3');
+    // h2Element.innerText = "1 завдання";
+    // document.body.appendChild(h2Element);
+    //
+    // let divElement = document.createElement('div');
+    // divElement.id = "text";
+    // divElement.innerText = "Hello";
+    // document.body.appendChild(divElement);
+    //
+    // let buttonElement = document.createElement('button');
+    // buttonElement.innerText = "Click me and I hidden Hello";
+    // document.body.appendChild(buttonElement);
+    // buttonElement.onclick = function () {
+    //     divElement.style.display = 'none'
+    //     buttonElement.innerText = "Yes!"
+    // }
 
     //     - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
 
-    let div1 = document.createElement('div');
-    div1.innerText = 'Task 2'
-    document.body.appendChild(div1);
-
-    buttonElement2 = document.createElement('button');
-    buttonElement2.innerText = 'Click me! and button will be hidden';
-    document.body.appendChild(buttonElement2);
-    buttonElement2.onclick = function () {
-        buttonElement2.hidden = true;
-    }
+    // let div1 = document.createElement('div');
+    // div1.innerText = 'Task 2'
+    // document.body.appendChild(div1);
+    //
+    // buttonElement2 = document.createElement('button');
+    // buttonElement2.innerText = 'Click me! and button will be hidden';
+    // document.body.appendChild(buttonElement2);
+    // buttonElement2.onclick = function () {
+    //     buttonElement2.hidden = true;
+    // }
 
     // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати
     // інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 
-    let inputWithText = document.createElement('input');
-    inputWithText.setAttribute("type", "text");
-    document.body.appendChild(inputWithText);
-
-    let inputWithButton = document.createElement('input');
-    inputWithButton.setAttribute("type", "button");
-    inputWithButton.value = 'Перевірити введений вік';
-    document.body.appendChild(inputWithButton);
-
-    inputWithButton.onclick = function () {
-        let age = document.getElementsByTagName('input')[0].value;
-        if (!age) {
-            console.log('You did not enter your age');
-        } else if (age < 0 || age > 140) {
-            console.log('You enter the wrong number')}
-        else if (age < 18) {
-            console.log('You are too yang!');
-        }  else {
-            console.log('Welcome on our site')
-        }
-    }
+    // let inputWithText = document.createElement('input');
+    // inputWithText.setAttribute("type", "text");
+    // document.body.appendChild(inputWithText);
+    //
+    // let inputWithButton = document.createElement('input');
+    // inputWithButton.setAttribute("type", "button");
+    // inputWithButton.value = 'Перевірити введений вік';
+    // document.body.appendChild(inputWithButton);
+    //
+    // inputWithButton.onclick = function () {
+    //     let age = document.getElementsByTagName('input')[0].value;
+    //     if (!age) {
+    //         console.log('You did not enter your age');
+    //     } else if (age < 0 || age > 140) {
+    //         console.log('You enter the wrong number')
+    //     } else if (age < 18) {
+    //         console.log('You are too yang!');
+    //     } else {
+    //         console.log('Welcome on our site')
+    //     }
+    // }
 
     // - Создайте меню, которое раскрывается/сворачивается при клике
-    let menuElement = document.getElementsByClassName('menu')[0];
-    let titleElement = document.getElementsByClassName('title')[0];
-
-    titleElement.onclick = function () {
-        menuElement.classList.toggle('hidden');
-    }
-
+    // let menuElement = document.getElementsByClassName('menu')[0];
+    // let titleElement = document.getElementsByClassName('title')[0];
+    //
+    // titleElement.onclick = function () {
+    //     menuElement.classList.toggle('hidden');
+    // }
 
     // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
     //     Вывести список комментариев в документ, каждый в своем блоке.
     //     Добавьте каждому комментарию по кнопке для сворачивания его body.
 
-    let comments = [
-        {name: 'Vasia', body: 'Go home.'},
-        {name: 'Anton', body: 'Play tennis.'},
-        {name: 'Kolia', body: 'Wath TV.'},
-        {name: 'Olia', body: 'Help mother.'},
-    ];
+    // let comments = [
+    //     {name: 'Vasia', body: 'Go home.'},
+    //     {name: 'Anton', body: 'Play tennis.'},
+    //     {name: 'Kolia', body: 'Wath TV.'},
+    //     {name: 'Olia', body: 'Help mother.'},
+    // ];
+    //
+    // for (const comment of comments) {
+    //     let divWrap = document.createElement('div');
+    //     divWrap.style = ('display:flex');
+    //     let h2 = document.createElement('h2');
+    //     let p = document.createElement('p');
+    //     let button = document.createElement('button');
+    //     button.innerText = 'Click';
+    //     h2.innerText = comment.name;
+    //     p.innerText = comment.body;
+    //
+    //     divWrapAppend = document.body.appendChild(divWrap);
+    //
+    //     divWrapAppend.append(h2, p, button);
+    //     let i = 1;
+    //     button.onclick = function () {
+    //         if (i % 2 === 1) {
+    //             p.innerText = ''
+    //         } else {
+    //             p.innerText = comment.body
+    //         }
+    //         i++;
+    //     }
+    // }
 
-    for (const comment of comments) {
-        let divWrap=document.createElement('div');
-        divWrap.style=('display:flex');
-        let h2=document.createElement('h2');
-        let p=document.createElement('p');
-        let button=document.createElement('button');
-        button.innerText='Click';
-        h2.innerText=comment.name;
-        p.innerText=comment.body;
 
-        divWrapAppend=document.body.appendChild(divWrap);
+    //                                             CLASSWORK
 
-        divWrapAppend.append(h2,p,button);
-        let i=1;
-        button.onclick=function (){
-            if(i%2===1){ p.innerText=''}
-          else{p.innerText=comment.body}
-            i++;
+    // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+    //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+    // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+    //
+
+    //
+    // let firstContainer = document.createElement('div');
+    // firstContainer.innerText = 'Form 1';
+    // firstContainer.style.border = '1px solid silver';
+    // firstContainer.style.margin = '10px';
+    // document.body.appendChild(firstContainer);
+    //
+    // let secondContainer = document.createElement('div');
+    // secondContainer.innerText = 'Form 2';
+    // secondContainer.style.border = '1px solid silver';
+    // secondContainer.style.margin = '10px';
+    // document.body.appendChild(secondContainer);
+    //
+    // let formOne = document.createElement('form');
+    // formOne.setAttribute('name', 'formOne');
+    // firstContainer.appendChild(formOne);
+    //
+    // let formTwo = document.createElement('form');
+    // secondContainer.appendChild(formTwo);
+    // formTwo.setAttribute('name', 'formTwo');
+    //
+    // let inputOne = document.createElement('input');
+    // inputOne.setAttribute('name', 'inputOne');
+    //
+    // let inputTwo = document.createElement('input');
+    // inputTwo.setAttribute('name', 'inputTwo');
+    //
+    // let inputThree = document.createElement('input');
+    // inputThree.setAttribute('name', 'inputThree');
+    //
+    // let inputFour = document.createElement('input');
+    // inputFour.setAttribute('name', 'inputFour');
+    //
+    // formOne.append(inputOne, inputTwo);
+    // formTwo.append(inputThree, inputFour);
+    //
+    // let button = document.createElement('button');
+    // button.innerText = 'Click';
+    // document.body.appendChild(button);
+    //
+    // button.addEventListener('click', function () {
+    //     console.log(document.forms.formOne.inputOne.value);
+    //     console.log(document.forms.formOne.inputTwo.value);
+    //     console.log(document.forms.formTwo.inputThree.value);
+    //     console.log(document.forms.formTwo.inputFour.value);
+    // })
+
+    //
+    // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+    //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    // let hr = document.createElement('hr')
+    // document.body.appendChild(hr);
+    //
+    // let inputOne = document.createElement('input');
+    // let inputTwo = document.createElement('input');
+    // let inputThree = document.createElement('input');
+    // let button = document.createElement('button');
+    //
+    // button.innerText = 'Criate Tabl';
+    // document.body.append(inputOne, inputTwo, inputThree, button);
+    //
+    // button.addEventListener('click', function () {
+    //     let tr = inputOne.value;
+    //     let td = inputTwo.value;
+    //     let text = inputThree.value;
+    //
+    // function crieteTabl(tr, td, text) {
+    //     let tabl = document.createElement('table');
+    //     let divTabl = document.createElement('div');
+    //
+    //     tabl.style.border = '1px solid green';
+    //     divTabl.appendChild(tabl);
+    //     document.body.appendChild(divTabl);
+    //
+    //     for (let i = 0; i < tr; i++) {
+    //         let tr = document.createElement('tr');
+    //         tr.style.border = '1px solid green';
+    //
+    //         for (let j = 0; j < td; j++) {
+    //             let td = document.createElement('td');
+    //             td.style.border = '1px solid silver';
+    //             td.innerText = `${text}`;
+    //             tabl.appendChild(tr);
+    //             tr.appendChild(td)
+    //         }
+    //     }
+    // }
+    // crieteTabl(tr, td, text);
+    // })
+
+    // (Додатковачастина для завдання)
+    ////
+    // - Сворити масив не цензцрних слів.
+    //     Сворити інпут текстового типу.
+    //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
+    // кинути алерт з попередженням.
+    //     Перевірку робити при натисканні на кнопку
+
+    let arr = ['дурбелик','дупа','злодій','йолоп','лайно','дурепа  ']; // тут ваш масив слів ))
+
+    let input = document.createElement('input');
+
+    let button = document.createElement('button');
+    button.innerText = ' Check the text';
+    document.body.append(input, button);
+
+    button.addEventListener('click', function () {
+        let valueInput = input.value;
+
+        for (let mat of arr) {
+            if (mat === valueInput) {
+                alert('Such himself');
+                input.value = '';// очищення строкипісля введення
+                return;
+            }
         }
-    }
 
-
-//                                             CLASSWORK
-
-// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
-//     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
-// Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
-//
-
-
-//
-// let myForm1 = document.createElement("form");
-// let myForm2 = document.createElement("form");
-// myForm1.setAttribute('id','f1');
-// myForm2.setAttribute('id','f2');
-// document.body.appendChild(myForm1);
-// document.body.appendChild(myForm2);
-//
-// let myInput1 = document.createElement("input");
-// let myInput2 = document.createElement("input");
-//
-// myInput1.setAttribute("type", "text");
-// myInput2.setAttribute("type", "text");
-// myInput1.setAttribute("value", "1");
-// myInput2.setAttribute("value", "1");
-// document.getElementById(f1).appendChild(myInput1);
-// document.getElementById(f2).appendChild(myInput2);
-// let button1=document.createElement('button');
-// button.innerText='Click';
-
-//
-// - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
-//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
-// (Додатковачастина для завдання)
-//
-//
-// - Сворити масив не цензцрних слів.
-//     Сворити інпут текстового типу.
-//     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
-// кинути алерт з попередженням.
-//     Перевірку робити при натисканні на кнопку
-//
-//
-// - Сворити масив не цензцрних слів.
-//     Сворити інпут текстового типу.
-//     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
-//     Кинути алерт з попередженням у випадку якщо містить.
-//     Перевірку робити при натисканні на кнопку
-
+        if (valueInput) {
+            alert('Well done!');
+            input.value = ''; // очищення строкипісля введення
+        }
+    })
 
 </script>
 
