@@ -260,9 +260,10 @@
 //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
 //     }
 // ];
-//
+
 // // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // // Приклад структири знаходиться у файлі example.png
+
 // for (const course of coursesArray) {
 //
 //     let courseElement = document.createElement('course');
@@ -271,6 +272,7 @@
 //
 //     let monthDurationElement = document.createElement('div');
 //     monthDurationElement.innerText = course.monthDuration;
+//
 //     let hourDurationElement = document.createElement('div');
 //     hourDurationElement.innerText = course.hourDuration;
 //
@@ -294,371 +296,446 @@
 
 //- Є масив :
 
-let usersList = [
-    {
-        id: 1,
-        name: 'Leanne Graham',
-        username: 'Bret',
-        email: 'Sincere@april.biz',
-        address: {
-            street: 'Kulas Light',
-            suite: 'Apt. 556',
-            city: 'Gwenborough',
-            zipcode: '92998-3874',
-            geo: {
-                lat: '-37.3159',
-                lng: '81.1496'
-            }
-        },
-        phone: '1-770-736-8031 x56442',
-        website: 'hildegard.org',
-        company: {
-            name: 'Romaguera-Crona',
-            catchPhrase: 'Multi-layered client-server neural-net',
-            bs: 'harness real-time e-markets'
-        }
-    },
-    {
-        id: 2,
-        name: 'Ervin Howell',
-        username: 'Antonette',
-        email: 'Shanna@melissa.tv',
-        address: {
-            street: 'Victor Plains',
-            suite: 'Suite 879',
-            city: 'Wisokyburgh',
-            zipcode: '90566-7771',
-            geo: {
-                lat: '-43.9509',
-                lng: '-34.4618'
-            }
-        },
-        phone: '010-692-6593 x09125',
-        website: 'anastasia.net',
-        company: {
-            name: 'Deckow-Crist',
-            catchPhrase: 'Proactive didactic contingency',
-            bs: 'synergize scalable supply-chains'
-        }
-    },
-    {
-        id: 3,
-        name: 'Clementine Bauch',
-        username: 'Samantha',
-        email: 'Nathan@yesenia.net',
-        address: {
-            street: 'Douglas Extension',
-            suite: 'Suite 847',
-            city: 'McKenziehaven',
-            zipcode: '59590-4157',
-            geo: {
-                lat: '-68.6102',
-                lng: '-47.0653'
-            }
-        },
-        phone: '1-463-123-4447',
-        website: 'ramiro.info',
-        company: {
-            name: 'Romaguera-Jacobson',
-            catchPhrase: 'Face to face bifurcated interface',
-            bs: 'e-enable strategic applications'
-        }
-    },
-    {
-        id: 4,
-        name: 'Patricia Lebsack',
-        username: 'Karianne',
-        email: 'Julianne.OConner@kory.org',
-        address: {
-            street: 'Hoeger Mall',
-            suite: 'Apt. 692',
-            city: 'South Elvis',
-            zipcode: '53919-4257',
-            geo: {
-                lat: '29.4572',
-                lng: '-164.2990'
-            }
-        },
-        phone: '493-170-9623 x156',
-        website: 'kale.biz',
-        company: {
-            name: 'Robel-Corkery',
-            catchPhrase: 'Multi-tiered zero tolerance productivity',
-            bs: 'transition cutting-edge web services'
-        }
-    },
-    {
-        id: 5,
-        name: 'Chelsey Dietrich',
-        username: 'Kamren',
-        email: 'Lucio_Hettinger@annie.ca',
-        address: {
-            street: 'Skiles Walks',
-            suite: 'Suite 351',
-            city: 'Roscoeview',
-            zipcode: '33263',
-            geo: {
-                lat: '-31.8129',
-                lng: '62.5342'
-            }
-        },
-        phone: '(254)954-1289',
-        website: 'demarco.info',
-        company: {
-            name: 'Keebler LLC',
-            catchPhrase: 'User-centric fault-tolerant solution',
-            bs: 'revolutionize end-to-end systems'
-        }
-    },
-    {
-        id: 6,
-        name: 'Mrs. Dennis Schulist',
-        username: 'Leopoldo_Corkery',
-        email: 'Karley_Dach@jasper.info',
-        address: {
-            street: 'Norberto Crossing',
-            suite: 'Apt. 950',
-            city: 'South Christy',
-            zipcode: '23505-1337',
-            geo: {
-                lat: '-71.4197',
-                lng: '71.7478'
-            }
-        },
-        phone: '1-477-935-8478 x6430',
-        website: 'ola.org',
-        company: {
-            name: 'Considine-Lockman',
-            catchPhrase: 'Synchronised bottom-line interface',
-            bs: 'e-enable innovative applications'
-        }
-    },
-    {
-        id: 7,
-        name: 'Kurtis Weissnat',
-        username: 'Elwyn.Skiles',
-        email: 'Telly.Hoeger@billy.biz',
-        address: {
-            street: 'Rex Trail',
-            suite: 'Suite 280',
-            city: 'Howemouth',
-            zipcode: '58804-1099',
-            geo: {
-                lat: '24.8918',
-                lng: '21.8984'
-            }
-        },
-        phone: '210.067.6132',
-        website: 'elvis.io',
-        company: {
-            name: 'Johns Group',
-            catchPhrase: 'Configurable multimedia task-force',
-            bs: 'generate enterprise e-tailers'
-        }
-    },
-    {
-        id: 8,
-        name: 'Nicholas Runolfsdottir V',
-        username: 'Maxime_Nienow',
-        email: 'Sherwood@rosamond.me',
-        address: {
-            street: 'Ellsworth Summit',
-            suite: 'Suite 729',
-            city: 'Aliyaview',
-            zipcode: '45169',
-            geo: {
-                lat: '-14.3990',
-                lng: '-120.7677'
-            }
-        },
-        phone: '586.493.6943 x140',
-        website: 'jacynthe.com',
-        company: {
-            name: 'Abernathy Group',
-            catchPhrase: 'Implemented secondary concept',
-            bs: 'e-enable extensible e-tailers'
-        }
-    },
-    {
-        id: 9,
-        name: 'Glenna Reichert',
-        username: 'Delphine',
-        email: 'Chaim_McDermott@dana.io',
-        address: {
-            street: 'Dayna Park',
-            suite: 'Suite 449',
-            city: 'Bartholomebury',
-            zipcode: '76495-3109',
-            geo: {
-                lat: '24.6463',
-                lng: '-168.8889'
-            }
-        },
-        phone: '(775)976-6794 x41206',
-        website: 'conrad.com',
-        company: {
-            name: 'Yost and Sons',
-            catchPhrase: 'Switchable contextually-based project',
-            bs: 'aggregate real-time technologies'
-        }
-    },
-    {
-        id: 10,
-        name: 'Clementina DuBuque',
-        username: 'Moriah.Stanton',
-        email: 'Rey.Padberg@karina.biz',
-        address: {
-            street: 'Kattie Turnpike',
-            suite: 'Suite 198',
-            city: 'Lebsackbury',
-            zipcode: '31428-2261',
-            geo: {
-                lat: '-38.2386',
-                lng: '57.2232'
-            }
-        },
-        phone: '024-648-3804',
-        website: 'ambrose.net',
-        company: {
-            name: 'Hoeger LLC',
-            catchPhrase: 'Centralized empowering task-force',
-            bs: 'target end-to-end models'
-        }
-    }
-];
+// let usersList = [
+//     {
+//         id: 1,
+//         name: 'Leanne Graham',
+//         username: 'Bret',
+//         email: 'Sincere@april.biz',
+//         address: {
+//             street: 'Kulas Light',
+//             suite: 'Apt. 556',
+//             city: 'Gwenborough',
+//             zipcode: '92998-3874',
+//             geo: {
+//                 lat: '-37.3159',
+//                 lng: '81.1496'
+//             }
+//         },
+//         phone: '1-770-736-8031 x56442',
+//         website: 'hildegard.org',
+//         company: {
+//             name: 'Romaguera-Crona',
+//             catchPhrase: 'Multi-layered client-server neural-net',
+//             bs: 'harness real-time e-markets'
+//         }
+//     },
+//     {
+//         id: 2,
+//         name: 'Ervin Howell',
+//         username: 'Antonette',
+//         email: 'Shanna@melissa.tv',
+//         address: {
+//             street: 'Victor Plains',
+//             suite: 'Suite 879',
+//             city: 'Wisokyburgh',
+//             zipcode: '90566-7771',
+//             geo: {
+//                 lat: '-43.9509',
+//                 lng: '-34.4618'
+//             }
+//         },
+//         phone: '010-692-6593 x09125',
+//         website: 'anastasia.net',
+//         company: {
+//             name: 'Deckow-Crist',
+//             catchPhrase: 'Proactive didactic contingency',
+//             bs: 'synergize scalable supply-chains'
+//         }
+//     },
+//     {
+//         id: 3,
+//         name: 'Clementine Bauch',
+//         username: 'Samantha',
+//         email: 'Nathan@yesenia.net',
+//         address: {
+//             street: 'Douglas Extension',
+//             suite: 'Suite 847',
+//             city: 'McKenziehaven',
+//             zipcode: '59590-4157',
+//             geo: {
+//                 lat: '-68.6102',
+//                 lng: '-47.0653'
+//             }
+//         },
+//         phone: '1-463-123-4447',
+//         website: 'ramiro.info',
+//         company: {
+//             name: 'Romaguera-Jacobson',
+//             catchPhrase: 'Face to face bifurcated interface',
+//             bs: 'e-enable strategic applications'
+//         }
+//     },
+//     {
+//         id: 4,
+//         name: 'Patricia Lebsack',
+//         username: 'Karianne',
+//         email: 'Julianne.OConner@kory.org',
+//         address: {
+//             street: 'Hoeger Mall',
+//             suite: 'Apt. 692',
+//             city: 'South Elvis',
+//             zipcode: '53919-4257',
+//             geo: {
+//                 lat: '29.4572',
+//                 lng: '-164.2990'
+//             }
+//         },
+//         phone: '493-170-9623 x156',
+//         website: 'kale.biz',
+//         company: {
+//             name: 'Robel-Corkery',
+//             catchPhrase: 'Multi-tiered zero tolerance productivity',
+//             bs: 'transition cutting-edge web services'
+//         }
+//     },
+//     {
+//         id: 5,
+//         name: 'Chelsey Dietrich',
+//         username: 'Kamren',
+//         email: 'Lucio_Hettinger@annie.ca',
+//         address: {
+//             street: 'Skiles Walks',
+//             suite: 'Suite 351',
+//             city: 'Roscoeview',
+//             zipcode: '33263',
+//             geo: {
+//                 lat: '-31.8129',
+//                 lng: '62.5342'
+//             }
+//         },
+//         phone: '(254)954-1289',
+//         website: 'demarco.info',
+//         company: {
+//             name: 'Keebler LLC',
+//             catchPhrase: 'User-centric fault-tolerant solution',
+//             bs: 'revolutionize end-to-end systems'
+//         }
+//     },
+//     {
+//         id: 6,
+//         name: 'Mrs. Dennis Schulist',
+//         username: 'Leopoldo_Corkery',
+//         email: 'Karley_Dach@jasper.info',
+//         address: {
+//             street: 'Norberto Crossing',
+//             suite: 'Apt. 950',
+//             city: 'South Christy',
+//             zipcode: '23505-1337',
+//             geo: {
+//                 lat: '-71.4197',
+//                 lng: '71.7478'
+//             }
+//         },
+//         phone: '1-477-935-8478 x6430',
+//         website: 'ola.org',
+//         company: {
+//             name: 'Considine-Lockman',
+//             catchPhrase: 'Synchronised bottom-line interface',
+//             bs: 'e-enable innovative applications'
+//         }
+//     },
+//     {
+//         id: 7,
+//         name: 'Kurtis Weissnat',
+//         username: 'Elwyn.Skiles',
+//         email: 'Telly.Hoeger@billy.biz',
+//         address: {
+//             street: 'Rex Trail',
+//             suite: 'Suite 280',
+//             city: 'Howemouth',
+//             zipcode: '58804-1099',
+//             geo: {
+//                 lat: '24.8918',
+//                 lng: '21.8984'
+//             }
+//         },
+//         phone: '210.067.6132',
+//         website: 'elvis.io',
+//         company: {
+//             name: 'Johns Group',
+//             catchPhrase: 'Configurable multimedia task-force',
+//             bs: 'generate enterprise e-tailers'
+//         }
+//     },
+//     {
+//         id: 8,
+//         name: 'Nicholas Runolfsdottir V',
+//         username: 'Maxime_Nienow',
+//         email: 'Sherwood@rosamond.me',
+//         address: {
+//             street: 'Ellsworth Summit',
+//             suite: 'Suite 729',
+//             city: 'Aliyaview',
+//             zipcode: '45169',
+//             geo: {
+//                 lat: '-14.3990',
+//                 lng: '-120.7677'
+//             }
+//         },
+//         phone: '586.493.6943 x140',
+//         website: 'jacynthe.com',
+//         company: {
+//             name: 'Abernathy Group',
+//             catchPhrase: 'Implemented secondary concept',
+//             bs: 'e-enable extensible e-tailers'
+//         }
+//     },
+//     {
+//         id: 9,
+//         name: 'Glenna Reichert',
+//         username: 'Delphine',
+//         email: 'Chaim_McDermott@dana.io',
+//         address: {
+//             street: 'Dayna Park',
+//             suite: 'Suite 449',
+//             city: 'Bartholomebury',
+//             zipcode: '76495-3109',
+//             geo: {
+//                 lat: '24.6463',
+//                 lng: '-168.8889'
+//             }
+//         },
+//         phone: '(775)976-6794 x41206',
+//         website: 'conrad.com',
+//         company: {
+//             name: 'Yost and Sons',
+//             catchPhrase: 'Switchable contextually-based project',
+//             bs: 'aggregate real-time technologies'
+//         }
+//     },
+//     {
+//         id: 10,
+//         name: 'Clementina DuBuque',
+//         username: 'Moriah.Stanton',
+//         email: 'Rey.Padberg@karina.biz',
+//         address: {
+//             street: 'Kattie Turnpike',
+//             suite: 'Suite 198',
+//             city: 'Lebsackbury',
+//             zipcode: '31428-2261',
+//             geo: {
+//                 lat: '-38.2386',
+//                 lng: '57.2232'
+//             }
+//         },
+//         phone: '024-648-3804',
+//         website: 'ambrose.net',
+//         company: {
+//             name: 'Hoeger LLC',
+//             catchPhrase: 'Centralized empowering task-force',
+//             bs: 'target end-to-end models'
+//         }
+//     }
+// ];
+//
+// //Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+//
+// for (const user of usersList) {
+//
+//     let divWrap = document.createElement('div');
+//     let clas = 'wrap' + user.id;
+//     divWrap.classList.add(clas);
+//     divWrap.style.width = '600px';
+//     divWrap.style.height = '40px';
+//     divWrap.style.alignItems = 'center';
+//     divWrap.style.background = 'silver';
+//     divWrap.style.border = '5px solid green';
+//     document.body.appendChild(divWrap);
+//
+//     let divAddress = document.createElement('div');
+//     let addressClas = 'address' + user.id;
+//     divAddress.classList.add(addressClas);
+//     divAddress.style.width = '300px';
+//     divAddress.style.height = '130px';
+//     divAddress.style.border = '4px solid green';
+//     document.body.appendChild(divAddress);
+//
+//     let divGeo = document.createElement('div');
+//     let geoClas = 'geo' + user.id;
+//     divGeo.classList.add(geoClas);
+//     divGeo.style.width = '300px';
+//     divGeo.style.height = '35px';
+//     divGeo.style.display = 'flex';
+//     divGeo.style.justifyContent = 'space-around';
+//     divGeo.innerText= 'Geo:';
+//     divGeo.style.border = '5px solid blue';
+//     document.body.appendChild(divGeo);
+//
+//     let divCompany = document.createElement('div');
+//     let companyClas = 'company' + user.id;
+//     divCompany.classList.add(companyClas);
+//     divCompany.style.width = '600px';
+//     divCompany.style.display = 'flex';
+//     divCompany.innerText= 'Company:';
+//     divCompany.style.height = '80px';
+//     divCompany.style.border = '5px solid yellow';
+//     document.body.appendChild(divCompany);
+//
+//     let divCriate = function (value) {
+//         let div = document.createElement('div');
+//         div.style.border = '1px solid red';
+//         div.innerText = value + '\u00A0 ' + '\u00A0 ';
+//         document.body.getElementsByClassName('header' + user.id)[0].appendChild(div);
+//     }
+//
+//     let divHeaderFunction = function (value) {
+//         let divHeader = document.createElement('div');
+//         divHeader.style.border = '1px solid yellow';
+//         divHeader.classList.add('header' + user.id);
+//         divHeader.style.display = 'flex';
+//         divHeader.style.justifyContent = 'space-around';
+//         divHeader.style.alignItems = 'center';
+//         divHeader.style.height = '20px';
+//         document.getElementsByClassName(clas)[0].appendChild(divHeader);
+//     }
+//
+//     let divAddressCreate = function (value) {
+//         let divAddress = document.createElement('div');
+//         divAddress.style.border = '1px solid pink';
+//         divAddress.classList.add('address' + user.id);
+//         divAddress.style.height = '30px';
+//         divAddress.innerText = value;
+//         document.getElementsByClassName(addressClas)[0].appendChild(divAddress);
+//     }
+//     let divGeoCreate = function (value) {
+//         let divGeo = document.createElement('div');
+//         divGeo.style.border = '1px solid pink';
+//         divGeo.classList.add('address' + user.id);
+//         divGeo.style.height = '30px';
+//         divGeo.style.width = '100px';
+//         divGeo.innerText = value;
+//         document.getElementsByClassName(geoClas)[0].appendChild(divGeo);
+//     }
+//
+//     let blockCriate = function (value) {
+//         let div = document.createElement('div');
+//         div.style.border = '5px solid brown';
+//         div.style.height = '30px';
+//         div.style.width = '200px';
+//         div.innerText = value;
+//         document.body.appendChild(div);
+//     }
+//
+//     let companyCriate = function (value) {
+//         let divCompany = document.createElement('div');
+//         divCompany = document.createElement('div');
+//         divCompany.style.border = '1px solid brown';
+//         divCompany.style.width = '300px';
+//         divCompany.innerText = value;
+//         document.getElementsByClassName(companyClas)[0].appendChild(divCompany);
+//     }
+//
+//     divHeaderFunction();
+//
+//     let id = user.id;
+//     divCriate(id);
+//
+//     let name = user.name;
+//     divCriate(name);
+//
+//     let username = user.username;
+//     divCriate(username);
+//
+//     let email = user.email;
+//     divCriate(email);
+//
+//
+//     let address = user.address;
+//     for (const addressKey in address) {
+//         if (typeof address[addressKey] !== 'object') {
+//             divAddressCreate(address[addressKey])
+//         } else {
+//             let geo = address[addressKey];
+//             for (const geoElement in geo) {
+//                 divGeoCreate(geo[geoElement]);
+//             }
+//         }
+//     }
+//
+//     let phone = user.phone;
+//     blockCriate(phone)
+//
+//     let website = user.website;
+//     blockCriate(website)
+//
+//     let company = user.company;
+//     for (const companyKey in company) {
+//         companyCriate(company[companyKey])
+//     }
+// }
 
-//Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
-
-for (const user of usersList) {
-
-    let divWrap = document.createElement('div');
-    let clas = 'wrap' + user.id;
-    divWrap.classList.add(clas);
-    divWrap.style.width = '600px';
-    divWrap.style.height = '40px';
-    divWrap.style.alignItems = 'center';
-    divWrap.style.background = 'silver';
-    divWrap.style.border = '5px solid green';
-    document.body.appendChild(divWrap);
-
-    let divAddress = document.createElement('div');
-    let addressClas = 'address' + user.id;
-    divAddress.classList.add(addressClas);
-    divAddress.style.width = '300px';
-    divAddress.style.height = '130px';
-    divAddress.style.border = '4px solid green';
-    document.body.appendChild(divAddress);
-
-    let divGeo = document.createElement('div');
-    let geoClas = 'geo' + user.id;
-    divGeo.classList.add(geoClas);
-    divGeo.style.width = '300px';
-    divGeo.style.height = '35px';
-    divGeo.style.display = 'flex';
-    divGeo.style.justifyContent = 'space-around';
-    divGeo.innerText= 'Geo:';
-    divGeo.style.border = '5px solid blue';
-    document.body.appendChild(divGeo);
-
-    let divCompany = document.createElement('div');
-    let companyClas = 'company' + user.id;
-    divCompany.classList.add(companyClas);
-    divCompany.style.width = '600px';
-    divCompany.style.display = 'flex';
-    divCompany.innerText= 'Company:';
-    divCompany.style.height = '80px';
-    divCompany.style.border = '5px solid yellow';
-    document.body.appendChild(divCompany);
-
-    let divCriate = function (value) {
-        let div = document.createElement('div');
-        div.style.border = '1px solid red';
-        div.innerText = value + '\u00A0 ' + '\u00A0 ';
-        document.body.getElementsByClassName('header' + user.id)[0].appendChild(div);
-    }
-
-    let divHeaderFunction = function (value) {
-        let divHeader = document.createElement('div');
-        divHeader.style.border = '1px solid yellow';
-        divHeader.classList.add('header' + user.id);
-        divHeader.style.display = 'flex';
-        divHeader.style.justifyContent = 'space-around';
-        divHeader.style.alignItems = 'center';
-        divHeader.style.height = '20px';
-        document.getElementsByClassName(clas)[0].appendChild(divHeader);
-    }
-
-    let divAddressCreate = function (value) {
-        let divAddress = document.createElement('div');
-        divAddress.style.border = '1px solid pink';
-        divAddress.classList.add('address' + user.id);
-        divAddress.style.height = '30px';
-        divAddress.innerText = value;
-        document.getElementsByClassName(addressClas)[0].appendChild(divAddress);
-    }
-    let divGeoCreate = function (value) {
-        let divGeo = document.createElement('div');
-        divGeo.style.border = '1px solid pink';
-        divGeo.classList.add('address' + user.id);
-        divGeo.style.height = '30px';
-        divGeo.style.width = '100px';
-        divGeo.innerText = value;
-        document.getElementsByClassName(geoClas)[0].appendChild(divGeo);
-    }
-
-    let blockCriate = function (value) {
-        let div = document.createElement('div');
-        div.style.border = '5px solid brown';
-        div.style.height = '30px';
-        div.style.width = '200px';
-        div.innerText = value;
-        document.body.appendChild(div);
-    }
-
-    let companyCriate = function (value) {
-        let divCompany = document.createElement('div');
-        divCompany = document.createElement('div');
-        divCompany.style.border = '1px solid brown';
-        divCompany.style.width = '300px';
-        divCompany.innerText = value;
-        document.getElementsByClassName(companyClas)[0].appendChild(divCompany);
-    }
-
-    divHeaderFunction();
-
-    let id = user.id;
-    divCriate(id);
-
-    let name = user.name;
-    divCriate(name);
-
-    let username = user.username;
-    divCriate(username);
-
-    let email = user.email;
-    divCriate(email);
-
-
-    let address = user.address;
-    for (const addressKey in address) {
-        if (typeof address[addressKey] !== 'object') {
-            divAddressCreate(address[addressKey])
-        } else {
-            let geo = address[addressKey];
-            for (const geoElement in geo) {
-                divGeoCreate(geo[geoElement]);
-            }
-        }
-    }
-
-    let phone = user.phone;
-    blockCriate(phone)
-
-    let website = user.website;
-    blockCriate(website)
-
-    let company = user.company;
-    for (const companyKey in company) {
-        companyCriate(company[companyKey])
-    }
-}
+//                                          Variant 2
+//
+// Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+//
+// for (const user of usersList) {
+//
+//     let userWrapElement = document.createElement('div');
+//         userWrapElement.style.border='2px solid green'
+//
+//     let idElement= document.createElement('h3')
+//     let nameElement= document.createElement('h1')
+//     let userNameElement= document.createElement('h2')
+//     let emailElement= document.createElement('h4')
+//     let userElement = document.createElement('ul');
+//     let AddressElement = document.createElement('ul');
+//     let OneElement = document.createElement('p');
+//     let websiteElement = document.createElement('p');
+//     let companyElement = document.createElement('ul');
+//
+//         let id = user.id;
+//         idElement.innerText='id:'+id;
+//
+//         let name = user.name;
+//         nameElement.innerText='name:'+name;
+//
+//         let username = user.username;
+//         userNameElement.innerText='username:'+username;
+//
+//         let email = user.email;
+//         emailElement.innerText='email:'+email;
+//
+//         let address = user.address;
+//         for (const addressKey in address) {
+//
+//             if (typeof address[addressKey] !== 'object') {
+//                 let userOneElement = document.createElement('li');
+//                 userOneElement.innerText=address[addressKey];
+//                 userElement.appendChild(userOneElement);
+//             } else {
+//                 let geo = address[addressKey];
+//                 for (const geoElement in geo) {
+//                     let userOneElement = document.createElement('li');
+//                     userOneElement.innerText=geo[geoElement]
+//                     AddressElement.appendChild(userOneElement)
+//                 }
+//             }
+//         }
+//
+//         let phone = user.phone;
+//         OneElement.innerText=phone;
+//
+//         let website = user.website;
+//         websiteElement.innerText=website;
+//
+//         let company = user.company;
+//         for (const companyKey in company) {
+//             let userOneElement = document.createElement('li');
+//             userOneElement.innerText=company[companyKey];
+//             companyElement.appendChild(userOneElement);
+//         }
+//
+//     userWrapElement.appendChild(idElement);
+//     userWrapElement.appendChild(nameElement);
+//     userWrapElement.appendChild(userNameElement);
+//     userWrapElement.appendChild(emailElement);
+//     userWrapElement.appendChild(userElement);
+//     userWrapElement.appendChild(AddressElement);
+//     userWrapElement.appendChild(OneElement);
+//     userWrapElement.appendChild(websiteElement);
+//     userWrapElement.appendChild(websiteElement);
+//     userWrapElement.appendChild(companyElement);
+//
+//     document.body.appendChild(userWrapElement);
+// }
