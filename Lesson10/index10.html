@@ -339,17 +339,17 @@
     //
     // -- взять массив пользователей
     let usersWithAddress = [
-     {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-     {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
-     {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
-     {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
-     {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
-     {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
-     {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
-     {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
-     {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
-     {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-     {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
+        {id: 1, name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 2, name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+        {id: 3, name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+        {id: 4, name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+        {id: 5, name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+        {id: 6, name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+        {id: 7, name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+        {id: 8, name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+        {id: 9, name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+        {id: 10, name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+        {id: 11, name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
     ];
     // - Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
     // 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
@@ -357,38 +357,78 @@
     // 3й - оставляет тех у кого город киев
     // Данные выводить в документ
     //
-    let f1= document.forms.f1;
-    f1.onsubmit= e =>{e.preventDefault();};
 
-    f1.age.onclick=function () {
-        if (this.checked) {
-            let arrAge = usersWithAddress.filter(value => value.age>=29)
-            console.log(arrAge)
+    let f1 = document.forms.f1;
+    let filteredUsersArr = [];
+    let age = 0;
+    let city = 0;
+    let status = 0;
+
+    function flattenObject(obj, prefix = '') {
+        return Object.keys(obj).reduce((acc, k) => {
+            const pre = prefix.length ? prefix + '.' : '';
+            if (typeof obj[k] === 'object') Object.assign(acc, flattenObject(obj[k], pre + k));
+            else acc[pre + k] = obj[k];
+            return acc;
+        }, {});
+    }
+
+    function printArr(arr) {
+        let newArr = flattenObject(arr);
+        let wrap = document.createElement('div');
+        wrap.style.border = '1px solid green';
+        document.body.append(wrap);
+
+        for (const key in newArr) {
+            let info = document.createElement('div');
+            let text = newArr[key];
+            info.innerText = text;
+            document.body.append(info)
         }
     }
-    f1.kyiv.onclick=function () {
+
+    function handlerClicks(age, citi, status) {
+        if (age === 1) {
+            filteredUsersArr = filteredUsersArr.filter(value => value.age >= 29);
+        }
+        if (citi === 1) {
+            filteredUsersArr = filteredUsersArr.filter(value => value.address.city === 'Kyiv');
+        }
+        if (status === 1) {
+            filteredUsersArr = filteredUsersArr.filter(value => !value.status);
+        }
+        console.log(filteredUsersArr);
+        printArr(filteredUsersArr);
+    }
+
+    f1.onsubmit = e => {
+        e.preventDefault();
+    };
+
+    f1.age.onclick = function () {
         if (this.checked) {
-            let arrKyiv = usersWithAddress.filter(value => value.address.city === 'Kyiv')
-            console.log(arrKyiv)
+            age = 1;
+            filteredUsersArr = usersWithAddress.filter(value => value.age >= 29);
+            handlerClicks(age, city, status)
+        }
+    }
+    f1.kyiv.onclick = function () {
+        if (this.checked) {
+            city = 1;
+            filteredUsersArr = usersWithAddress.filter(value => value.address.city === 'Kyiv')
+            handlerClicks(age, city, status)
         }
     }
 
-    f1.status.onclick=function (){
-        if(this.checked){
-           let  arrFalse= usersWithAddress.filter(value => !value.status);
-            console.log(arrFalse)
-                  }
-            }
+    f1.status.onclick = function () {
+        if (this.checked) {
+            status = 1;
+            filteredUsersArr = usersWithAddress.filter(value => !value.status);
+            handlerClicks(age, city, status);
+        }
+    }
 
-    // for (const arrFalseElement of arrFalse) {
-    //     console.log(arrFalseElement)
-    //         let info=document.createElement('div');
-    //     let text='';
-    //     for (const arrFalseElementKey in arrFalseElement) {
-    //         if(typeof arrFalseElement[arrFalseElementKey] !== "object" )
-    //         text=text+' '+arrFalseElement[arrFalseElementKey]+' ';
-    //     } info.innerText=text;
-    //     document.body.append(info)
+
     //
     //
     // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
